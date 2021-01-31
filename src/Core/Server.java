@@ -7,18 +7,20 @@ public class Server
     ArrayList<Customer> customers;
     ArrayList<Publisher> publishers;
     ArrayList<Admin > admins;
+    ArrayList<Book> books;
 
     public Server()
     {
         customers = new ArrayList<>();
         publishers = new ArrayList<>();
         admins = new ArrayList<>();
+        books = new ArrayList<>();
     }
 
     public static void main(String[] args)
     {
         Server server = new Server();
-
+        server.loadDataBase();
 
     }
 
@@ -57,5 +59,24 @@ public class Server
 
     }
 
+    public Customer getCustomer(String name)
+    {
+        return null;
+    }
+
+    public Publisher getPublisher(String name)
+    {
+        return null;
+    }
+
+    public ArrayList<Book> getBooks()
+    {
+        return  null;
+    }
+
+    private void loadDataBase()
+    {
+
+    }
 
 }
