@@ -55,6 +55,14 @@ public class SignUpGUI extends JFrame {
         phoneNumber.setEditable(true);
         jPanel1.add(phoneNumber);
 
+
+ 	done =creteButton("Done",70,70);
+        jPanel1.add(done);
+        JPanel panel=new JPanel();
+        panel.add(jPanel1);
+        jFrame.getContentPane().add(panel);
+        jFrame.setVisible(true);
+
     }
 
     
