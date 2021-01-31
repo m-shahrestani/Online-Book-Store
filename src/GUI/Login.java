@@ -5,6 +5,7 @@ import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,13 +13,15 @@ public class Login extends JFrame
 {
     Server server;
 
-    public Login(Server server, int mode)
+    public Login(Server server)
     {
         this.server = server;
 
         JFrame frame = new JFrame();
-        JTextField nameField = new JTextField("Name");
-        JTextField passField = new JTextField("Password");
+        frame.setLayout(new FlowLayout());
+
+        JTextField nameField = new JTextField("Name", 10);
+        JTextField passField = new JTextField("Password", 10);
 
         JButton customerButton = new JButton("Customer");
         JButton AuthorButton = new JButton("Author");
@@ -46,7 +49,7 @@ public class Login extends JFrame
                 }
         );
 
-        customerButton.addActionListener(
+        AuthorButton.addActionListener(
                 new ActionListener()
                 {
                     @Override
@@ -65,6 +68,7 @@ public class Login extends JFrame
                 }
         );
 
+        frame.pack();
         frame.setVisible(true);
     }
 }

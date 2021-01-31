@@ -5,8 +5,10 @@ import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Flow;
 
 public class PublisherGUI
 {
@@ -26,6 +28,7 @@ public class PublisherGUI
     private void showFrame()
     {
         JFrame frame = new JFrame("Publisher Panel");
+        frame.setLayout(new FlowLayout());
 
         JPanel publisherBooksPanel = new JPanel();
         JScrollPane publisherBooksScroll = new JScrollPane(publisherBooksPanel);
@@ -59,6 +62,8 @@ public class PublisherGUI
         frame.add(bookAuthorField);
         frame.add(bookEditionField);
         frame.add(addBookButton);
+
+        frame.pack();
         frame.setVisible(true);
     }
 

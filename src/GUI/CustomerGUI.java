@@ -5,6 +5,7 @@ import Core.Customer;
 import Core.Server;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,6 +25,7 @@ public class CustomerGUI
     private void showFrame()
     {
         JFrame frame = new JFrame("Customer Panel");
+        frame.setLayout(new FlowLayout());
 
         JPanel databaseBooksPanel = new JPanel();
         JScrollPane databaseBooksScroll = new JScrollPane(databaseBooksPanel);
@@ -32,8 +34,10 @@ public class CustomerGUI
 
         updateDatabaseBooksPanel(databaseBooksPanel);
 
-        frame.add(cartPanel);
-        frame.add(databaseBooksPanel);
+        frame.add(databaseBooksScroll);
+        frame.add(cartScroll);
+
+        frame.pack();
         frame.setVisible(true);
     }
 
