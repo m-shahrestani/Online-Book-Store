@@ -13,6 +13,21 @@ public class DataBase {
         this.books = new ArrayList<>();
     }
 
+    public void showSameSubjectBooks(String subject){
+        for (Book book : books){
+            if(book.getSubject().equals(subject)){
+                System.out.println(book.getSubject()+" "+book.getName()+" "+book.getId()+" "+book.getPublisher().getPublishName()+" "+book.getPrice());
+            }
+        }
+    }
+    public void showSamePublisherB(String publisherName){
+        for (Book book : books){
+            if(book.getPublisher().getPublishName().equals(publisherName)){
+                System.out.println(book.getSubject()+" "+book.getName()+" "+book.getId()+" "+book.getPublisher().getPublishName()+" "+book.getPrice());
+            }
+        }
+    }
+
     public void addNewCustomer(Customer newCustomer){
         customers.add(newCustomer);
     }
