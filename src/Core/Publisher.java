@@ -24,4 +24,8 @@ public class Publisher
         return name;
     }
 
+    public ArrayList<Book> getBooks()
+    {
+        return books;
+    }
 }
