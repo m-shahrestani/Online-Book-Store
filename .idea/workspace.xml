@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
+    <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="Add components for CustomerGUI.java frame and Add AddToCartActionListener class for buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Online Book Store" />
@@ -47,8 +48,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Core.Server" />
+      <module name="Online Book Store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -65,7 +80,7 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="205000" />
       <workItem from="1612078428205" duration="5610000" />
-      <workItem from="1612096933019" duration="6177000" />
+      <workItem from="1612096933019" duration="7615000" />
     </task>
     <task id="LOCAL-00001" summary="Write actionListeners for buttons">
       <created>1612101178604</created>
@@ -137,7 +152,42 @@
       <option name="project" value="LOCAL" />
       <updated>1612103392486</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Write getBooks()">
+      <created>1612105409249</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612105409249</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Change addBookToCart() method input">
+      <created>1612105438239</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612105438239</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add components for PublisherGUI frame">
+      <created>1612105524124</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612105524124</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add components for CustomerGUI.java frame and Add AddToCartActionListener class for buttons">
+      <created>1612105589691</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612105589691</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add a line to create Login object">
+      <created>1612106789300</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612106789300</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +204,12 @@
     <MESSAGE value="Write CustomerGUI.java" />
     <MESSAGE value="Write PublisherGUI.java.java" />
     <MESSAGE value="Write Login.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write Login.java" />
+    <MESSAGE value="Write getBooks()" />
+    <MESSAGE value="Change addBookToCart() method input" />
+    <MESSAGE value="Add components for PublisherGUI frame" />
+    <MESSAGE value="Add components for CustomerGUI.java frame and Add AddToCartActionListener class for buttons" />
+    <MESSAGE value="Add a line to create Login object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a line to create Login object" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
@@ -165,30 +220,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1612105182287" />
-    <state x="938" y="196" key="CommitChangelistDialog2" timestamp="1612105523448">
+    <state x="770" y="185" key="CommitChangelistDialog2" timestamp="1612106832261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="938" y="196" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612105523448" />
+    <state x="770" y="185" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612106832261" />
     <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612076451044">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612076451044" />
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1612076589096">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1612106722487">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
-    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1612076589096">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612106722487" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1612106722486">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
-    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1612076589095">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612106722486" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1612106722486">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612076589095" />
-    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1612076589096">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612106722486" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1612106722486">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612106722486" />
     <state x="616" y="235" key="run.anything.popup" timestamp="1612081355992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
