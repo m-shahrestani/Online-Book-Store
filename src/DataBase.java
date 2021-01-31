@@ -1,16 +1,24 @@
 import java.util.ArrayList;
 
 public class DataBase {
+    private ArrayList<Customer> customers;
     private ArrayList<Publisher> publishers;
     private ArrayList<Admin> admins;
     private ArrayList<Book> books;
 
     public DataBase() {
+        this.customers = new ArrayList<>();
         this.publishers = new ArrayList<>();
         this.admins = new ArrayList<>();
         this.books = new ArrayList<>();
     }
 
+    public void addNewCustomer(Customer newCustomer){
+        customers.add(newCustomer);
+    }
+    public void deleteCustomer(Customer customer){
+        customers.remove(customer);
+    }
     public void addPublisher(Publisher newPublisher){
         publishers.add(newPublisher);
     }
@@ -30,6 +38,13 @@ public class DataBase {
 
     public void setAdmins(ArrayList<Admin> admins) {
         this.admins = admins;
+    }
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(ArrayList<Customer> customers) {
+        this.customers = customers;
     }
 
     public ArrayList<Publisher> getPublishers() {
