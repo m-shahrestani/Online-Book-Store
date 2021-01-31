@@ -15,6 +15,13 @@ public class Server
         admins = new ArrayList<>();
     }
 
+    public static void main(String[] args)
+    {
+        Server server = new Server();
+
+
+    }
+
     public ArrayList<Customer> getCustomers()
     {
         return customers;
@@ -49,4 +56,6 @@ public class Server
     {
 
     }
+
+
 }
