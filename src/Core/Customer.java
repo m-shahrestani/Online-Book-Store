@@ -12,7 +12,7 @@ public class Customer
         this.name = name;
     }
 
-    public void addBookToCart()
+    public void addBookToCart(Book book)
     {
 
     }
