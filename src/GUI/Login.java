@@ -1,6 +1,7 @@
 package GUI;
 
 import Core.Customer;
+import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
@@ -35,9 +36,12 @@ public class Login extends JFrame
                     {
                         Customer customer = server.getCustomer(nameField.getText());
                         if (customer != null)
-                           new CustomerGUI(server, customer);
+                            new CustomerGUI(server, customer);
                         else
-                            new CustomerGUI(server, null);
+                        {
+                            Customer newCustomer = new Customer(nameField.getText());
+                            new CustomerGUI(server, newCustomer);
+                        }
                     }
                 }
         );
@@ -48,11 +52,14 @@ public class Login extends JFrame
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-                        Customer publisher = server.getPublisher(nameField.getText());
+                        Publisher publisher = server.getPublisher(nameField.getText());
                         if (publisher != null)
                             new PublisherGUI(server, publisher);
                         else
-                            new PublisherGUI(server, null);
+                        {
+                            Publisher newPublisher = new Publisher(nameField.getText());
+                            new PublisherGUI(server, newPublisher);
+                        }
 
                     }
                 }
