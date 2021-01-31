@@ -29,6 +29,32 @@ public class SignUpGUI extends JFrame {
         jLabel1.setForeground(Color.white);
         jPanel1.add(jLabel1);
 
+  Color color=Color.LIGHT_GRAY;
+        JTextField jTextField =createTextField("  name",color,70,70);
+        jTextField.setEditable(false);
+        jPanel1.add(jTextField);
+
+        name = createTextField("",Color.LIGHT_GRAY,70,70);
+        name.setEditable(true);
+        jPanel1.add(name);
+
+        jTextField=createTextField("  address ",color,70,70);
+        jTextField.setEditable(false);
+        jPanel1.add(jTextField);
+
+        address = createTextField("",Color.LIGHT_GRAY,70,70);
+        address.setEditable(true);
+        jPanel1.add(address);
+
+
+        jTextField = createTextField("  phone number",color,70,70);
+        jTextField.setEditable(false);
+        jPanel1.add(jTextField);
+
+        phoneNumber = createTextField("",Color.LIGHT_GRAY,70,70);
+        phoneNumber.setEditable(true);
+        jPanel1.add(phoneNumber);
+
     }
 
     
