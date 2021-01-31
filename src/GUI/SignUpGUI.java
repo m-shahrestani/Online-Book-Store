@@ -65,6 +65,20 @@ public class SignUpGUI extends JFrame {
 
     }
 
-    
+      public JTextField createTextField(String s, Color color, int w, int h){
+        JTextField t=new JTextField(s);
+        t.setBackground(color);
+        t.setPreferredSize(new Dimension(w,h));
+        t.setFont(new Font("Arial",19,19));
+        return t;
+    }
+    public JButton creteButton(String s,int w,int h){
+        JButton b=new JButton(s);
+        b.setPreferredSize(new Dimension(w,h));
+        b.setFont(new Font("Arial",19,20));
+        b.setBackground(Color.gray);
+        b.setOpaque(true);
+        return  b;
+    }
 
 }
