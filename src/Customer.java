@@ -4,6 +4,7 @@ public class Customer {
     private String name;
     private String address;
     private String phoneNumber;
+    private Cart cart;
 
     public Customer(int username, String password, String name, String address, String phoneNumber) {
         this.username = username;
@@ -11,6 +12,15 @@ public class Customer {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        cart = new Cart(this);
+    }
+
+    public void addBookToCart(Book book){
+        cart.addBook(book);
+    }
+
+    public void removeBook(Book book){
+        cart.deleteBook(book);
     }
 
     public int getUsername() {
