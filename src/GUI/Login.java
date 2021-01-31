@@ -1,4 +1,3 @@
-package GUI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +12,7 @@ public class Login {
     private JComboBox jComboBox;
     private int mod = 0 ;
     public Login(){
- jFrame = new JFrame("online book store");
+        jFrame = new JFrame("online book store");
         jFrame.setSize(700,400);
 
         userName = createTextField("",Color.LIGHT_GRAY,200,50);
@@ -69,7 +68,6 @@ public class Login {
         jFrame.add(jPanel3);
       // jFrame.add(jPanel1,BorderLayout.CENTER);
         jFrame.setVisible(true);
-   
     }
     public JTextField createTextField(String s, Color color, int w, int h){
         JTextField t=new JTextField(s);
@@ -103,5 +101,33 @@ public class Login {
         });
     }
 
- 
+    private class ActionListenerExample implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+           if (e.getSource().equals(add)){
+               if (mod == 1){
+                   LoginController loginController = new LoginController();
+
+
+               }
+               else if (mod == 2){
+
+               }
+               else if (mod == 3){
+
+               }
+           }
+            if (e.getSource().equals(login)){
+                if (mod == 1){
+                    LoginController loginController = new LoginController();
+                   // loginController.signInCustomer();
+                }
+                else if (mod == 2){
+
+                }
+                else if (mod == 3){
+
+                }
+            }
+        }
+    }
     }
