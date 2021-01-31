@@ -6,7 +6,6 @@ import Core.Server;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class Login extends JFrame
 {
@@ -17,35 +16,48 @@ public class Login extends JFrame
         this.server = server;
 
         JFrame frame = new JFrame();
-        JButton jButton = new JButton("Hello");
+        JTextField nameField = new JTextField("Name");
+        JTextField passField = new JTextField("Password");
 
-        frame.add(jButton);
-        jButton.addActionListener(
+        JButton customerButton = new JButton("Customer");
+        JButton AuthorButton = new JButton("Author");
+
+        frame.add(customerButton);
+        frame.add(AuthorButton);
+        frame.add(nameField);
+        frame.add(passField);
+
+        customerButton.addActionListener(
                 new ActionListener()
                 {
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-                        check();
+                        Customer customer = server.getCustomer(nameField.getText());
+                        if (customer != null)
+                           new CustomerGUI(server, customer);
+                        else
+                            new CustomerGUI(server, null);
+                    }
+                }
+        );
+
+        customerButton.addActionListener(
+                new ActionListener()
+                {
+                    @Override
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Customer publisher = server.getPublisher(nameField.getText());
+                        if (publisher != null)
+                            new PublisherGUI(server, publisher);
+                        else
+                            new PublisherGUI(server, null);
+
                     }
                 }
         );
 
         frame.setVisible(true);
-    }
-
-
-    public void check()
-    {
-        ArrayList<Customer> customers = server.getCustomers();
-        
-        if (textFiled.equal(user.name))
-        {
-            if (mode == 1)
-                CustomerGUI customerGUI = new CustomerGUI(server);
-            else if (mode == 2)
-                PublisherGUI publisherGUI = new PublisherGUI(server);
-        }
-
     }
 }
