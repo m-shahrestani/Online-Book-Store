@@ -18,10 +18,7 @@ public class PublisherGUI
         this.server = server;
         this.publisher = publisher;
 
-        if (publisher != null)
-        {
-            updateBooks();
-        }
+        updateBooks();
 
         showFrame();
     }
@@ -30,27 +27,38 @@ public class PublisherGUI
     {
         JFrame frame = new JFrame("Publisher Panel");
 
-        JTextField bookName = new JTextField("Name");
-        JTextField bookAuthor = new JTextField("Author");
-        JTextField bookEdition = new JTextField("Edition");
+        JPanel publisherBooksPanel = new JPanel();
+        JScrollPane publisherBooksScroll = new JScrollPane(publisherBooksPanel);
 
-        JButton addBook = new JButton("Add Book");
+        JTextField bookNameField = new JTextField("Name");
+        JTextField bookAuthorField = new JTextField("Author");
+        JTextField bookEditionField = new JTextField("Edition");
 
-        addBook.addActionListener(
+        JButton addBookButton = new JButton("Add Book");
+
+        addBookButton.addActionListener(
                 new ActionListener()
                 {
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-                        server.addBook(
-                                new Book(bookName.getName(),
-                                bookAuthor.getText(),
-                                bookEdition.getText())
+                        Book book = new Book(
+                                bookNameField.getName(),
+                                bookAuthorField.getText(),
+                                bookEditionField.getText()
                         );
+                        server.addBook(book);
+                        publisher.addBook(book);
+                        updateBooks();
                     }
                 }
         );
 
+        frame.add(publisherBooksScroll);
+        frame.add(bookNameField);
+        frame.add(bookAuthorField);
+        frame.add(bookEditionField);
+        frame.add(addBookButton);
         frame.setVisible(true);
     }
 

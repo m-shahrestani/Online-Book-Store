@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +65,7 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="205000" />
       <workItem from="1612078428205" duration="5610000" />
-      <workItem from="1612096933019" duration="4096000" />
+      <workItem from="1612096933019" duration="6177000" />
     </task>
     <task id="LOCAL-00001" summary="Write actionListeners for buttons">
       <created>1612101178604</created>
@@ -90,7 +88,56 @@
       <option name="project" value="LOCAL" />
       <updated>1612102305303</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Write Book.java">
+      <created>1612103283384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103283384</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Write Publisher.java">
+      <created>1612103298832</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103298832</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Write Customer.java">
+      <created>1612103316827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103316827</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Write Server.java">
+      <created>1612103332229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103332229</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Write CustomerGUI.java">
+      <created>1612103348112</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103348112</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Write PublisherGUI.java.java">
+      <created>1612103360875</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103360875</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Write Login.java">
+      <created>1612103392486</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612103392486</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,17 +147,28 @@
     <MESSAGE value="Write actionListeners for buttons" />
     <MESSAGE value="Remove Main.java and write main() in Server.java" />
     <MESSAGE value="Write PublisherGUI.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write PublisherGUI.java" />
+    <MESSAGE value="Write Book.java" />
+    <MESSAGE value="Write Publisher.java" />
+    <MESSAGE value="Write Customer.java" />
+    <MESSAGE value="Write Server.java" />
+    <MESSAGE value="Write CustomerGUI.java" />
+    <MESSAGE value="Write PublisherGUI.java.java" />
+    <MESSAGE value="Write Login.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write Login.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="72" y="201" key="#Project_Structure/0.0.1280.984@0.0.1280.984" timestamp="1612076406389" />
-    <state x="599" y="187" key="CommitChangelistDialog2" timestamp="1612103360269">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1612105182287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="599" y="187" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612103360269" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1612105182287" />
+    <state x="599" y="187" key="CommitChangelistDialog2" timestamp="1612105457733">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="599" y="187" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612105457733" />
     <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612076451044">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
