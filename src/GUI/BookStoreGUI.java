@@ -8,6 +8,7 @@ public class BookStoreGUI {
     //frame
     private static JFrame frame;
 
+    
     private BookStoreGUI(){
         frame = new JFrame();
         //look and feel
