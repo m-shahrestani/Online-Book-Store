@@ -18,6 +18,11 @@ public class PublisherGUI
         this.server = server;
         this.publisher = publisher;
 
+        if (publisher != null)
+        {
+            updateBooks();
+        }
+
         showFrame();
     }
 
@@ -49,4 +54,8 @@ public class PublisherGUI
         frame.setVisible(true);
     }
 
+    public void updateBooks()
+    {
+
+    }
 }
