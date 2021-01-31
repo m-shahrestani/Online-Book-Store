@@ -1,6 +1,11 @@
 package GUI;
 import Core.BookStoreSystem;
-import Core.Publisher;
+import GUI.Login.AdminLoginMenu;
+import GUI.Login.CustomerLoginMenu;
+import GUI.Login.PublisherLoginMenu;
+import GUI.Register.AdminRegisterMenu;
+import GUI.Register.CustomerRegisterMenu;
+import GUI.Register.PublisherRegisterMenu;
 
 import javax.swing.*;
 import java.awt.*;

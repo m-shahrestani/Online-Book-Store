@@ -1,4 +1,4 @@
-package GUI;
+package GUI.Register;
 
 public class RegisterMenu {
 }
