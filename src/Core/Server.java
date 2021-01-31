@@ -1,5 +1,7 @@
 package Core;
 
+import GUI.Login;
+
 import java.util.ArrayList;
 
 public class Server
@@ -21,7 +23,7 @@ public class Server
     {
         Server server = new Server();
         server.loadDataBase();
-
+        Login login = new Login(server);
     }
 
     public ArrayList<Customer> getCustomers()
