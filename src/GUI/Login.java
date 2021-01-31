@@ -13,7 +13,62 @@ public class Login {
     private JComboBox jComboBox;
     private int mod = 0 ;
     public Login(){
-//login code ///
+ jFrame = new JFrame("online book store");
+        jFrame.setSize(700,400);
+
+        userName = createTextField("",Color.LIGHT_GRAY,200,50);
+        password = createTextField("",Color.LIGHT_GRAY,200,50);
+        add = creteButton("add",70,30);
+        login = creteButton("log in",80,30);
+        //jcombobox
+        String[] combo = {"Admin" , "Customer" , "Publisher"};
+        jComboBox = new JComboBox(combo);
+        jComboBox.setSelectedIndex(2);
+        jComboBox.setPreferredSize(new Dimension(120,30));
+        jComboBox.setBackground(Color.LIGHT_GRAY);
+        jComboBox.setSize(20,40);
+        actionHandlerComboBox();
+        //labels
+        JLabel jLabelUserName = new JLabel("user name");
+        JLabel jLabelPassword = new JLabel("password");
+        Font font=new Font("Verdana",Font.BOLD,12);
+        jLabelPassword.setFont(font);
+        jLabelPassword.setForeground(Color.white);
+        jLabelPassword.setBackground(Color.LIGHT_GRAY);
+        jLabelUserName.setFont(font);
+        jLabelUserName.setForeground(Color.white);
+        jLabelUserName.setBackground(Color.LIGHT_GRAY);
+        //panels
+        JPanel jPanel = new JPanel();
+        jPanel.setPreferredSize(new Dimension(700,100));
+        jPanel.setBackground(Color.DARK_GRAY);
+        jPanel.add(jLabelUserName);
+        jPanel.add(userName);
+        jFrame.add(jPanel);
+
+        JPanel jPanel1 = new JPanel();
+        jPanel1.setPreferredSize(new Dimension(700,100));
+        jPanel1.setBackground(Color.DARK_GRAY);
+        jPanel1.add(jLabelPassword);
+        jPanel1.add(password);
+
+        JPanel jPanel2 = new JPanel(new GridLayout(2,1));
+        jPanel2.setPreferredSize(new Dimension(700,200));
+        jPanel2.add(jPanel);
+        jPanel2.add(jPanel1);
+
+        JPanel jPanel3 = new JPanel();
+        jPanel3.setPreferredSize(new Dimension(700,100));
+        jPanel3.setBackground(Color.DARK_GRAY);
+        jPanel3.add(add);
+        jPanel3.add(login);
+        jPanel3.add(jComboBox);
+
+        jFrame.setLayout(new GridLayout(2,1));
+        jFrame.add(jPanel2);
+        jFrame.add(jPanel3);
+      // jFrame.add(jPanel1,BorderLayout.CENTER);
+        jFrame.setVisible(true);
    
     }
     public JTextField createTextField(String s, Color color, int w, int h){
