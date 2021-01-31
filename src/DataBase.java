@@ -20,7 +20,7 @@ public class DataBase {
             }
         }
     }
-    public void showSamePublisherB(String publisherName){
+    public void showSamePublisherBooks(String publisherName){
         for (Book book : books){
             if(book.getPublisher().getPublishName().equals(publisherName)){
                 System.out.println(book.getSubject()+" "+book.getName()+" "+book.getId()+" "+book.getPublisher().getPublishName()+" "+book.getPrice());
