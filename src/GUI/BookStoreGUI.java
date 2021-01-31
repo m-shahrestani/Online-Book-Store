@@ -1,14 +1,39 @@
 package GUI;
+import Core.BookStoreSystem;
+import Core.Publisher;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class BookStoreGUI {
+
     //singleton instance
     private static BookStoreGUI INSTANCE = null;
+    //system
+    private BookStoreSystem bookStoreSystem;
     //frame
     private static JFrame frame;
+    //Welcome Panel
+    private WelcomePanel welcomePanel;
+    //typeUser
+    private static TypeUser typeUserMenu;
+    //login
+    private static AdminLoginMenu adminLoginMenu;
+    private static CustomerLoginMenu customerLoginMenu;
+    private static PublisherLoginMenu publisherLoginMenu;
+    //Register
+    private static AdminRegisterMenu adminRegisterMenu;
+    private static CustomerRegisterMenu customerRegisterMenu;
+    private static PublisherRegisterMenu publisherRegisterMenu;
+    //Customer panel
 
-    
+    //admin panel
+
+    //publisher panel
+
+
+
+
     private BookStoreGUI(){
         frame = new JFrame();
         //look and feel
