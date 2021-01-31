@@ -66,4 +66,18 @@ public class LoginController {
             System.out.println("You did not sign up");
         }
     }
+    public void signUpCustomer(int username, String password, String name, String address, String phoneNumber){
+        Customer newCustomer = new Customer(username, password, name, address, phoneNumber);
+        db.addNewCustomer(newCustomer);
+    }
+
+    public void signUpPublisher(int username, String password, String publishName, String address, String phoneNumber){
+        Publisher newPublisher = new Publisher(username, password, publishName, address, phoneNumber);
+        db.addPublisher(newPublisher);
+    }
+
+    public void signUpAdmin(int username, String password){
+        Admin newAdmin = new Admin(username, password);
+        db.addAdmin(newAdmin);
+    }
 }
