@@ -83,5 +83,8 @@ public class SignUpGUI extends JFrame {
    public String getAddress() {
         return address.getText();
     }
+ public String getName() {
+        return name.getText();
+    }
 
 }
