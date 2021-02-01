@@ -1,10 +1,5 @@
 package GUI;
 
-import Core.Book;
-import Core.Customer;
-
-import java.util.ArrayList;
-
 public class CustomerCartPanel
 {
 

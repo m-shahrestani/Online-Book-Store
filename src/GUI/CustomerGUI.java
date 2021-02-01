@@ -22,8 +22,6 @@ public class CustomerGUI
         showFrame();
     }
 
-
-
     private void showFrame()
     {
         JFrame frame = new JFrame("Customer Panel");

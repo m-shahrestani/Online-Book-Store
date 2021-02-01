@@ -60,17 +60,17 @@ public class Server
         book.addComment(comment);
     }
 
-    public void addCustomer(Customer customer)
+    public void addCustomer(String userName, String password, String phoneNumber, String address)
     {
 
     }
 
-    public void addPublisher()
+    public void addPublisher(String userName, String password, String name, String phoneNumber, String address)
     {
 
     }
 
-    public void addAdmin()
+    public void addAdmin(String userName, String password, Server server)
     {
 
     }
@@ -181,7 +181,7 @@ public class Server
 
     //Publisher Methods
 
-    public void publisherAddBook(Publisher publisher, Book book)
+    public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
     {
 
     }

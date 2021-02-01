@@ -1,36 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="Write">
-      <change afterPath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LoginGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" afterDir="false" />
+    <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Publisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AddToCartActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AddToCartActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/Login$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/Login$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$ActionListenerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$ActionListenerExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +88,7 @@
       <workItem from="1612078428205" duration="5610000" />
       <workItem from="1612096933019" duration="9824000" />
       <workItem from="1612161367842" duration="9718000" />
-      <workItem from="1612182869355" duration="8523000" />
+      <workItem from="1612182869355" duration="11181000" />
     </task>
     <task id="LOCAL-00001" summary="Write actionListeners for buttons">
       <created>1612101178604</created>
@@ -226,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612106886093</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Design GUIs">
+      <created>1612191453216</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612191453216</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +240,8 @@
     <MESSAGE value="Add a line to create Login object" />
     <MESSAGE value="Set layout for frames" />
     <MESSAGE value="Delete Main.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Main.java" />
+    <MESSAGE value="Design GUIs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Design GUIs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
@@ -273,26 +264,26 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612076451044" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1612189811963">
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1612193613760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612189811963" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1612189811963">
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612193613760" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1612193613760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612189811963" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1612189811963">
+    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612193613760" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1612193613760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612076589095" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612189811963" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1612189811963">
+    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612193613760" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1612193613760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612076589096" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612189811963" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612193613760" />
     <state x="702" y="137" key="refactoring.ChangeSignatureDialog" timestamp="1612166738529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

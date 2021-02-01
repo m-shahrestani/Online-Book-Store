@@ -114,7 +114,7 @@ public class PublisherRegisterGUI extends JFrame
         {
             if (e.getSource().equals(signUp))
             {
-
+                //server.addPublisher();
             }
         }
     }
