@@ -80,5 +80,8 @@ public class SignUpGUI extends JFrame {
         b.setOpaque(true);
         return  b;
     }
+   public String getAddress() {
+        return address.getText();
+    }
 
 }
