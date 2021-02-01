@@ -43,6 +43,7 @@ public class Login extends JFrame
                         else
                         {
                             Customer newCustomer = new Customer(nameField.getText());
+                            server.addCustomer(newCustomer);
                             new CustomerGUI(server, newCustomer);
                         }
                     }

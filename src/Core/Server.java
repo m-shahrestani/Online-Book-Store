@@ -8,7 +8,7 @@ public class Server
 {
     ArrayList<Customer> customers;
     ArrayList<Publisher> publishers;
-    ArrayList<Admin > admins;
+    ArrayList<Admin> admins;
     ArrayList<Book> books;
 
     public Server()
@@ -46,7 +46,7 @@ public class Server
 
     }
 
-    public void addCustomer()
+    public void addCustomer(Customer customer)
     {
 
     }
@@ -58,7 +58,6 @@ public class Server
 
     public void addAdmin()
     {
-
     }
 
     public Customer getCustomer(String name)
@@ -80,5 +79,4 @@ public class Server
     {
 
     }
-
 }
