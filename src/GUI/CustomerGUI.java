@@ -22,6 +22,8 @@ public class CustomerGUI
         showFrame();
     }
 
+
+
     private void showFrame()
     {
         JFrame frame = new JFrame("Customer Panel");
@@ -68,7 +70,7 @@ class AddToCartActionListener implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        server.addBook(book);
+        //server.addBook();
         customer.addBookToCart(book);
     }
 }

@@ -28,18 +28,12 @@ public class Publisher implements Serializable
         books = new ArrayList<>();
     }
 
-
     public void addBook(Book book)
     {
 
     }
 
     public void removeBook(Book book)
-    {
-
-    }
-
-    public void changeCommission(int commission)
     {
 
     }
@@ -74,13 +68,13 @@ public class Publisher implements Serializable
 
     }
 
-//    public String getName()
-//    {
-//        return name;
-//    }
-//
-//    public ArrayList<Book> getBooks()
-//    {
-//        return books;
-//    }
+    public String getName()
+    {
+        return name;
+    }
+
+    public ArrayList<Book> getBooks()
+    {
+        return books;
+    }
 }

@@ -26,7 +26,6 @@ public class Customer implements Serializable
         favouriteBooks = new ArrayList<>();
         bookMarkedBooks = new ArrayList<>();
         carts = new ArrayList<>();
-
     }
 
     public void editAccountInfo(String password, String address, String phoneNumber)
@@ -81,4 +80,8 @@ public class Customer implements Serializable
 
     }
 
+    public Cart getCart()
+    {
+        return cart;
+    }
 }

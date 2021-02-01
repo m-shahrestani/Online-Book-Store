@@ -44,13 +44,13 @@ public class PublisherGUI
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-                        Book book = new Book(
-                                bookNameField.getName(),
-                                bookAuthorField.getText(),
-                                bookEditionField.getText()
-                        );
-                        server.addBook(book);
-                        publisher.addBook(book);
+//                        Book book = new Book(
+//                                bookNameField.getName(),
+//                                bookAuthorField.getText(),
+//                                bookEditionField.getText()
+//                        );
+//                        server.addBook(book);
+//                        publisher.addBook(book);
                         updateBooks();
                     }
                 }
