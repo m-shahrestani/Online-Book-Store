@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AddToCartActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AddToCartActionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$ActionListenerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$ActionListenerExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +78,7 @@
       <workItem from="1612078428205" duration="5610000" />
       <workItem from="1612096933019" duration="9824000" />
       <workItem from="1612161367842" duration="9718000" />
-      <workItem from="1612182869355" duration="11181000" />
+      <workItem from="1612182869355" duration="11485000" />
     </task>
     <task id="LOCAL-00001" summary="Write actionListeners for buttons">
       <created>1612101178604</created>
@@ -216,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612191453216</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Design GUIs">
+      <created>1612194073847</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612194073847</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,14 +253,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612187957223" />
-    <state x="770" y="185" key="CommitChangelistDialog2" timestamp="1612191450674">
+    <state x="770" y="185" key="CommitChangelistDialog2" timestamp="1612194072536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="185" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612191450674" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612076451044">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="770" y="185" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612194072536" />
+    <state x="630" y="261" key="FileChooserDialogImpl" timestamp="1612194235197">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612076451044" />
+    <state x="630" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612194235197" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1612193613760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -292,9 +290,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612187704064" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612190963951">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612194237070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612190963951" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612194237070" />
   </component>
 </project>

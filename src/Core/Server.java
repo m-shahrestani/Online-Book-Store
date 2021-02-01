@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Server
 {
-    ArrayList<Customer> customers;
-    ArrayList<Publisher> publishers;
-    ArrayList<Admin> admins;
-    ArrayList<Book> books;
+    private ArrayList<Customer> customers;
+    private ArrayList<Publisher> publishers;
+    private ArrayList<Admin> admins;
+    private ArrayList<Book> books;
 
     public Server()
     {
