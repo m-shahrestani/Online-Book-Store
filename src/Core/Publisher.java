@@ -30,7 +30,7 @@ public class Publisher implements Serializable
 
     public void addBook(Book book)
     {
-
+        books.add(book);
     }
 
     public void removeBook(Book book)

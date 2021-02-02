@@ -40,7 +40,13 @@ public class Customer implements Serializable
 
     public void addBookToCart(Book book)
     {
-
+        if (cart == null)
+        {
+            Cart cart = new Cart("1", this);
+            cart.addBook(book);
+        }
+        else
+            cart.addBook(book);
     }
 
     public void removeBookFromCart(Book book)

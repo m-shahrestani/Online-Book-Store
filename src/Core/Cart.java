@@ -11,7 +11,6 @@ public class Cart implements Serializable
     private int totalCost = 0;
     private boolean purchased = false;
 
-
     public Cart(String id, Customer customer)
     {
         this.id = id;
@@ -19,9 +18,9 @@ public class Cart implements Serializable
         books = new ArrayList<>();
     }
 
-    public void addBook()
+    public void addBook(Book book)
     {
-
+        books.add(book);
     }
 
     public void removeBook()
@@ -37,5 +36,10 @@ public class Cart implements Serializable
     public void buy()
     {
 
+    }
+
+    public ArrayList<Book> getBooks()
+    {
+        return books;
     }
 }
