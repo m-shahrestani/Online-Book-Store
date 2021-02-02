@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,18 +65,38 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="3846000" />
       <workItem from="1612115681202" duration="739000" />
-      <workItem from="1612253833004" duration="1366000" />
+      <workItem from="1612253833004" duration="2567000" />
     </task>
+    <task id="LOCAL-00001" summary="Write methods for adding books to Publisher and Customer's Cart">
+      <created>1612255313808</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612255313808</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Write methods for adding books to Publisher and Customer's Cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write methods for adding books to Publisher and Customer's Cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="72" y="201" key="#Project_Structure/0.0.1280.984@0.0.1280.984" timestamp="1612076406389" />
+    <state x="765" y="219" width="542" height="601" key="#com.intellij.ide.util.MemberChooser" timestamp="1612256693835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="219" width="542" height="601" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1612256693835" />
+    <state x="563" y="113" key="CommitChangelistDialog2" timestamp="1612255312593">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="563" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612255312593" />
     <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612115838150">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

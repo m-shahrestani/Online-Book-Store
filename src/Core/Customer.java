@@ -86,8 +86,53 @@ public class Customer implements Serializable
 
     }
 
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public int getCredit()
+    {
+        return credit;
+    }
+
     public Cart getCart()
     {
         return cart;
+    }
+
+    public ArrayList<Publisher> getFavouritesPublishers()
+    {
+        return favouritesPublishers;
+    }
+
+    public ArrayList<Book> getFavouriteBooks()
+    {
+        return favouriteBooks;
+    }
+
+    public ArrayList<Book> getBookMarkedBooks()
+    {
+        return bookMarkedBooks;
+    }
+
+    public ArrayList<Cart> getCarts()
+    {
+        return carts;
     }
 }

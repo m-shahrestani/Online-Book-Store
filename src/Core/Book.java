@@ -15,7 +15,7 @@ public class Book implements Serializable
     private int number;
     private String summery;
     private double discount = 0;
-    private double score;
+    private double score = 5;
     private double scoreNumber;
     private ArrayList<String> comments;
 
@@ -59,4 +59,63 @@ public class Book implements Serializable
 
     }
 
+    public String getName()
+    {
+        return name;
+    }
+
+    public Publisher getPublisher()
+    {
+        return publisher;
+    }
+
+    public String getAuthor()
+    {
+        return author;
+    }
+
+    public String getAgeRate()
+    {
+        return ageRate;
+    }
+
+    public String getSubject()
+    {
+        return subject;
+    }
+
+    public String getEdition()
+    {
+        return edition;
+    }
+
+    public int getPrice()
+    {
+        return price;
+    }
+
+    public int getNumber()
+    {
+        return number;
+    }
+
+    public String getSummery()
+    {
+        return summery;
+    }
+
+    public double getDiscount()
+    {
+        return discount;
+    }
+
+    public double getScore()
+    {
+        return score;
+    }
+
+    public ArrayList<String> getComments()
+    {
+        return comments;
+    }
 }

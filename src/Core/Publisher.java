@@ -68,13 +68,53 @@ public class Publisher implements Serializable
 
     }
 
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+
     public String getName()
     {
         return name;
     }
 
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public int getSales()
+    {
+        return sales;
+    }
+
+    public HashMap<Customer, ArrayList<Book>> getCustomersInfo()
+    {
+        return customersInfo;
+    }
+
     public ArrayList<Book> getBooks()
     {
         return books;
+    }
+
+    public double getCommission()
+    {
+        return commission;
+    }
+
+    public int getDiscountConst()
+    {
+        return discountConst;
     }
 }

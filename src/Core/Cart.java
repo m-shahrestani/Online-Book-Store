@@ -38,8 +38,28 @@ public class Cart implements Serializable
 
     }
 
+    public String getId()
+    {
+        return id;
+    }
+
+    public Customer getCustomer()
+    {
+        return customer;
+    }
+
     public ArrayList<Book> getBooks()
     {
         return books;
+    }
+
+    public int getTotalCost()
+    {
+        return totalCost;
+    }
+
+    public boolean isPurchased()
+    {
+        return purchased;
     }
 }
