@@ -39,10 +39,7 @@ public class LoginGUI
         //labels
         JLabel jLabelUserName = new JLabel("user name");
         JLabel jLabelPassword = new JLabel("password");
-        Font font=new Font("Verdana",Font.BOLD,12);
-        jLabelPassword.setFont(font);
-        jLabelPassword.setForeground(Color.white);
-        jLabelPassword.setBackground(Color.LIGHT_GRAY);
+      c
         jLabelUserName.setFont(font);
         jLabelUserName.setForeground(Color.white);
         jLabelUserName.setBackground(Color.LIGHT_GRAY);

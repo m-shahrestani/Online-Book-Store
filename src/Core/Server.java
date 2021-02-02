@@ -1,6 +1,8 @@
 package Core;
 
 import GUI.BookStoreGUI;
+import GUI.CustomerGUI;
+import GUI.PublisherGUI;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,8 @@ public class Server
         Server server = new Server();
         server.loadDataBase();
         BookStoreGUI bookStoreGUI = new BookStoreGUI(server);
+      //  CustomerGUI customerGUI= new CustomerGUI(server,new Customer("a","b","c","d"));
+
     }
 
     //

@@ -13,6 +13,8 @@ public class CustomerGUI
 {
     Server server;
     Customer customer;
+    JButton buy ;
+    JButton cart;
 
     public CustomerGUI(Server server, Customer customer)
     {
@@ -44,6 +46,8 @@ public class CustomerGUI
     public void updateDatabaseBooksPanel(JPanel databaseBooksPanel)
     {
 
+
+        //databaseBooksPanel.setLayout (new BoxLayout (,));
     }
 
     public void updateCartPanel(JPanel cartPanel)

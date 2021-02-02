@@ -17,7 +17,7 @@ public class Publisher implements Serializable
     private double commission = 0.15;
     private int discountConst = 0;
 
-    public Publisher(String userName, String password, String name, String phoneNumber, String address)
+    public Publisher()
     {
         this.userName = userName;
         this.password = password;

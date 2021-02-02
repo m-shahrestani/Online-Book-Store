@@ -1,5 +1,7 @@
 package GUI;
 
+import Core.Customer;
+
 public class CustomerCartPanel
 {
 

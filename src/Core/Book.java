@@ -59,4 +59,23 @@ public class Book implements Serializable
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }
