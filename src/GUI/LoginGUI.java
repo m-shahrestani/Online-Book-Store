@@ -3,97 +3,236 @@ package GUI;
 import Core.Server;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class LoginGUI
+public class LoginGUI extends JFrame
 {
     Server server;
 
-    private JFrame jFrame;
-    private JTextField userName;
-    private JTextField password;
+    private JTextField userNameTextField;
+    private JPasswordField passwordTextField;
+    private JComboBox typeUser;
     private JButton login;
-    private JComboBox jComboBox;
+    private JButton back;
     private int mod = 0 ;
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
 
     public LoginGUI(Server server)
     {
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        setIconImage(icon.getImage());
+        setTitle("Login");
+        setSize(700,400);
+        setLocation(300, 200);
+        setBackground(Color.white);
+
         this.server = server;
+        userNameTextField = new JTextField(20);
+        passwordTextField = new JPasswordField(20);
+        typeUser = new JComboBox(new String[] {"Admin" , "Customer" , "Publisher"});
+        login = new JButton("Sign up");
+        back = new JButton("Back");
 
-        jFrame = new JFrame("online book store");
-        jFrame.setSize(700,400);
+        //make main panel
+        JPanel mainPanel = new JPanel();
+        makeMainPanel(mainPanel);
 
-        userName = createTextField("",Color.LIGHT_GRAY,200,50);
-        password = createTextField("",Color.LIGHT_GRAY,200,50);
-        login = creteButton("log in",80,30);
-        //JComboBox
-        String[] combo = {"Admin" , "Customer" , "Publisher"};
-        jComboBox = new JComboBox(combo);
-        jComboBox.setSelectedIndex(2);
-        jComboBox.setPreferredSize(new Dimension(120,30));
-        jComboBox.setBackground(Color.LIGHT_GRAY);
-        jComboBox.setSize(20,40);
+        //add panels
+        JPanel fake1 = new JPanel();
+        fake1.setPreferredSize(new Dimension(100,50));
+        JPanel fake2 = new JPanel();
+        fake2.setPreferredSize(new Dimension(100,50));
+        JPanel fake3 = new JPanel();
+        fake3.setPreferredSize(new Dimension(50,75));
+        JPanel fake4 = new JPanel();
+        fake4.setPreferredSize(new Dimension(50,75));
+        add(fake1, BorderLayout.WEST);
+        add(fake2, BorderLayout.EAST);
+        add(fake3, BorderLayout.NORTH);
+        add(fake4, BorderLayout.SOUTH);
+        add(mainPanel, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    private void makeMainPanel(JPanel mainPanel){
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+        mainPanel.setBorder(new TitledBorder( new LineBorder(new Color(225,225,225)), "Login"));
+
+        //type user
+        JPanel typeUserPanel = new JPanel();
+        makeTypeUser(typeUserPanel);
+        //user panel
+        JPanel userPanel = new JPanel();
+        makeUserPanel(userPanel);
+        //pass panel
+        JPanel passPanel = new JPanel();
+        makePassPanel(passPanel);
+        //button panel
+        JPanel buttonPanel = new JPanel();
+        makeButtonPanel(buttonPanel);
+
+        //add panels to main panel
+        mainPanel.add(typeUserPanel);
+        mainPanel.add(userPanel);
+        mainPanel.add(passPanel);
+        mainPanel.add(buttonPanel);
+    }
+
+    private void makeTypeUser(JPanel typeUserPanel) {
+        JLabel typeUserLabel = new JLabel(" Type of user", SwingConstants.LEFT);
+        typeUserPanel.setLayout(new GridLayout(1,5));
+        JPanel typeUserPanel1 = new JPanel();
+        JPanel typeUserPanel2 = new JPanel();
+        JPanel typeUserPanel3= new JPanel();
+        JPanel typeUserPanel4 = new JPanel();
+        JPanel typeUserPanel5 = new JPanel();
+        typeUserPanel1.setLayout(new GridLayout(2,1));
+        typeUserPanel1.add(typeUserLabel, BorderLayout.NORTH);
+        typeUserPanel1.add(typeUser);
+        typeUserLabel.setPreferredSize(new Dimension(50, 50));
+        typeUser.setSelectedIndex(1);
+        typeUser.setPreferredSize(new Dimension(30,30));
+        typeUser.setBackground(Color.white);
+        typeUser.setSize(20,40);
         actionHandlerComboBox();
-        //labels
-        JLabel jLabelUserName = new JLabel("user name");
-        JLabel jLabelPassword = new JLabel("password");
-        Font font=new Font("Verdana",Font.BOLD,12);
-        jLabelPassword.setFont(font);
-        jLabelPassword.setForeground(Color.white);
-        jLabelPassword.setBackground(Color.LIGHT_GRAY);
-        jLabelUserName.setFont(font);
-        jLabelUserName.setForeground(Color.white);
-        jLabelUserName.setBackground(Color.LIGHT_GRAY);
-        //panels
-        JPanel jPanel = new JPanel();
-        jPanel.setPreferredSize(new Dimension(700,100));
-        jPanel.setBackground(Color.DARK_GRAY);
-        jPanel.add(jLabelUserName);
-        jPanel.add(userName);
-        jFrame.add(jPanel);
-
-        JPanel jPanel1 = new JPanel();
-        jPanel1.setPreferredSize(new Dimension(700,100));
-        jPanel1.setBackground(Color.DARK_GRAY);
-        jPanel1.add(jLabelPassword);
-        jPanel1.add(password);
-
-        JPanel jPanel2 = new JPanel(new GridLayout(2,1));
-        jPanel2.setPreferredSize(new Dimension(700,200));
-        jPanel2.add(jPanel);
-        jPanel2.add(jPanel1);
-
-        JPanel jPanel3 = new JPanel();
-        jPanel3.setPreferredSize(new Dimension(700,100));
-        jPanel3.setBackground(Color.DARK_GRAY);
-        jPanel3.add(login);
-        jPanel3.add(jComboBox);
-
-        jFrame.setLayout(new GridLayout(2,1));
-        jFrame.add(jPanel2);
-        jFrame.add(jPanel3);
-        // jFrame.add(jPanel1,BorderLayout.CENTER);
-        jFrame.setVisible(true);
+        typeUserPanel.add(typeUserPanel1);
+        typeUserPanel.add(typeUserPanel2);
+        typeUserPanel.add(typeUserPanel3);
+        typeUserPanel.add(typeUserPanel4);
+        typeUserPanel.add(typeUserPanel5);
     }
-    public JTextField createTextField(String s, Color color, int w, int h){
-        JTextField t=new JTextField(s);
-        t.setBackground(color);
-        t.setPreferredSize(new Dimension(w,h));
-        t.setFont(new Font("Arial",19,19));
-        return t;
+
+    private void makeUserPanel(JPanel userPanel) {
+        JLabel userNameLabel = new JLabel(" Username", SwingConstants.LEFT);
+        userPanel.setLayout(new GridLayout(1,2));
+        JPanel userPanel1 = new JPanel();
+        JPanel userPanel2 = new JPanel();
+        userPanel1.setLayout(new GridLayout(2,1));
+        userPanel1.add(userNameLabel, BorderLayout.NORTH);
+        userPanel1.add(userNameTextField);
+        userNameLabel.setPreferredSize(new Dimension(100, 50));
+        userNameTextField.setBackground(Color.white);
+        userNameTextField.setBorder(BorderFactory.createLineBorder(Color.red));
+        userNameTextField.setPreferredSize(new Dimension(100, 40));
+        userNameTextField.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                userNameTextField.setBorder(BorderFactory.createLineBorder(new Color(122,122,122)));
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if (userNameTextField.getText().equals("")) {
+                    userNameTextField.setBorder(BorderFactory.createLineBorder(Color.red));
+                }
+                else {
+                    userNameTextField.setBorder(BorderFactory.createLineBorder(new Color(122,122,122)));
+                }
+            }
+        });
+        userPanel.add(userPanel1);
+        userPanel.add(userPanel2);
     }
-    public JButton creteButton(String s,int w,int h){
-        JButton b=new JButton(s);
-        b.setPreferredSize(new Dimension(w,h));
-        b.setFont(new Font("Arial",19,20));
-        b.setBackground(Color.gray);
-        b.setOpaque(true);
-        return  b;
+
+    private void makePassPanel(JPanel passPanel) {
+        JLabel passwordLabel = new JLabel(" Password", SwingConstants.LEFT);
+        passPanel.setLayout(new GridLayout(1,2));
+        JPanel passPanel1 = new JPanel();
+        JPanel passPanel2 = new JPanel();
+        passPanel1.setLayout(new GridLayout(2,1));
+        passPanel1.add(passwordLabel, BorderLayout.NORTH);
+        passPanel1.add(passwordTextField);
+        passwordLabel.setPreferredSize(new Dimension(100, 50));
+        passwordTextField.setPreferredSize(new Dimension(100, 40));
+        passwordTextField.setBackground(Color.white);
+        passwordTextField.setBorder(BorderFactory.createLineBorder(Color.red));
+        passwordTextField.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                passwordTextField.setBorder(BorderFactory.createLineBorder(new Color(122,122,122)));
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if (passwordTextField.getText().equals("")) {
+                    passwordTextField.setBorder(BorderFactory.createLineBorder(Color.red));
+                }
+                else {
+                    passwordTextField.setBorder(BorderFactory.createLineBorder(new Color(122,122,122)));
+                }
+            }
+        });
+        passPanel.add(passPanel1);
+        passPanel.add(passPanel2);
     }
+
+    private void makeButtonPanel(JPanel buttonPanel) {
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+        JPanel buttonPanel1 = new JPanel();
+        JPanel buttonPanel2 = new JPanel();
+        buttonPanel2.setLayout(new BoxLayout(buttonPanel2, BoxLayout.X_AXIS));
+        buttonPanel2.setPreferredSize(new Dimension(50, 30));
+        login.setBackground(new Color(225,225,225));
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                login();
+            }
+        });
+        back.setBackground(Color.white);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false); //you can't see me!
+                dispose();//Destroy the JFrame object
+            }
+        });
+        buttonPanel2.add(login, BorderLayout.WEST);
+        buttonPanel2.add(back, BorderLayout.EAST);
+        buttonPanel.add(buttonPanel1);
+        buttonPanel.add(buttonPanel2);
+    }
+
     public void actionHandlerComboBox(){
-        jComboBox.addActionListener(new ActionListener() {
+        typeUser.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 JComboBox comboBox = (JComboBox) event.getSource();
                 Object selected = comboBox.getSelectedItem();
@@ -109,21 +248,8 @@ public class LoginGUI
         });
     }
 
-    private class ActionListenerExample implements ActionListener
-    {
-        public void actionPerformed(ActionEvent e)
-        {
-            if (e.getSource().equals(login)){
-                if (mod == 1){
+    private void login(){
 
-                }
-                else if (mod == 2){
-
-                }
-                else if (mod == 3){
-
-                }
-            }
-        }
     }
+
 }
