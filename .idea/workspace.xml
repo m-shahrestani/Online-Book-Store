@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$ActionListenerExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
     </list>
@@ -94,7 +81,7 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="3846000" />
       <workItem from="1612115681202" duration="739000" />
-      <workItem from="1612268350989" duration="12099000" />
+      <workItem from="1612268350989" duration="13403000" />
     </task>
     <servers />
   </component>
@@ -110,22 +97,22 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612115838150" />
-    <state width="1237" height="129" key="GridCell.Tab.0.bottom" timestamp="1612280736674">
+    <state width="1237" height="129" key="GridCell.Tab.0.bottom" timestamp="1612281910457">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="129" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612280736674" />
-    <state width="1237" height="129" key="GridCell.Tab.0.center" timestamp="1612280736673">
+    <state width="1237" height="129" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612281910457" />
+    <state width="1237" height="129" key="GridCell.Tab.0.center" timestamp="1612281910457">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="129" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612280736673" />
-    <state width="1237" height="129" key="GridCell.Tab.0.left" timestamp="1612280736673">
+    <state width="1237" height="129" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612281910457" />
+    <state width="1237" height="129" key="GridCell.Tab.0.left" timestamp="1612281910457">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="129" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612280736673" />
-    <state width="1237" height="129" key="GridCell.Tab.0.right" timestamp="1612280736674">
+    <state width="1237" height="129" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612281910457" />
+    <state width="1237" height="129" key="GridCell.Tab.0.right" timestamp="1612281910457">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="129" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612280736674" />
+    <state width="1237" height="129" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612281910457" />
     <state x="296" y="226" key="run.anything.popup" timestamp="1612272455040">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

@@ -26,6 +26,9 @@ public class Server
         publishers.add(new Publisher("di","d", "d"," g","g "));
         publishers.add(new Publisher("fdi","dh", "hd"," gh","g "));
         publishers.add(new Publisher("hdi","d", "dh"," g","g "));
+        admins.add(new Admin("a", "a", this));
+        admins.add(new Admin("d", "a", this));
+
     }
 
     public static void main(String[] args)

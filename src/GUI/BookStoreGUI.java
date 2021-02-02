@@ -28,6 +28,17 @@ public class BookStoreGUI extends JFrame
         frame.add(adminRegisterButton);
         frame.add(loginButton);
 
+        adminRegisterButton.addActionListener(
+                new ActionListener()
+                {
+                    @Override
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        new AdminRegisterGUI(server);
+                    }
+                }
+        );
+
         publisherRegisterButton.addActionListener(
                 new ActionListener()
                 {

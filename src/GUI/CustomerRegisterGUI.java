@@ -314,8 +314,17 @@ public class CustomerRegisterGUI extends JFrame
         String phoneNumberText = phoneNumberTextField.getText();
         String addressText =  addressTextField.getText();
 
-        if(userNameText.equals("") && passwordText.equals("")) {
-            JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+        if(userNameText.equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Username");
+        }
+        else if(passwordText.equals("")){
+            JOptionPane.showMessageDialog(null, "Please Enter Password");
+        }
+        else if(phoneNumberText.equals("")){
+            JOptionPane.showMessageDialog(null, "Please Enter Phone Number");
+        }
+        else if(addressText.equals("")){
+            JOptionPane.showMessageDialog(null, "Please Enter Address");
         }
         else {
             boolean flag = true;
