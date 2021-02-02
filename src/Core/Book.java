@@ -34,27 +34,27 @@ public class Book implements Serializable
         comments = new ArrayList<>();
     }
 
-    public void addScore(int score)
+    protected void addScore(int score)
     {
 
     }
 
-    public void addComment(String comment)
+    protected void addComment(String comment)
     {
 
     }
 
-    public void increaseNumberOfBook(int number)
+    protected void increaseNumber(int number)
     {
 
     }
 
-    public void decreaseNumberOfBook(int number)
+    protected void decreaseNumber(int number)
     {
 
     }
 
-    public void setBookDiscount(int discount)
+    protected void setBookDiscount(int discount)
     {
 
     }

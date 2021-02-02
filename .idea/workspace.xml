@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/src/Core/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,8 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="3846000" />
       <workItem from="1612115681202" duration="739000" />
-      <workItem from="1612253833004" duration="2567000" />
+      <workItem from="1612253833004" duration="2839000" />
+      <workItem from="1612270834252" duration="808000" />
     </task>
     <task id="LOCAL-00001" summary="Write methods for adding books to Publisher and Customer's Cart">
       <created>1612255313808</created>
@@ -74,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612255313808</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Write getter methods for classes">
+      <created>1612256728776</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612256728776</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,7 +92,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Write methods for adding books to Publisher and Customer's Cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write methods for adding books to Publisher and Customer's Cart" />
+    <MESSAGE value="Write getter methods for classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write getter methods for classes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
@@ -93,10 +104,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="219" width="542" height="601" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1612256693835" />
-    <state x="563" y="113" key="CommitChangelistDialog2" timestamp="1612255312593">
+    <state x="563" y="113" key="CommitChangelistDialog2" timestamp="1612256728102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612255312593" />
+    <state x="563" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612256728102" />
     <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612115838150">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

@@ -28,17 +28,17 @@ public class Customer implements Serializable
         carts = new ArrayList<>();
     }
 
-    public void editAccountInfo(String password, String address, String phoneNumber)
+    protected void editAccountInfo(String password, String address, String phoneNumber)
     {
 
     }
 
-    public void purchase()
+    protected void purchase()
     {
 
     }
 
-    public void addBookToCart(Book book)
+    protected void addBookToCart(Book book)
     {
         if (cart == null)
         {
@@ -49,39 +49,47 @@ public class Customer implements Serializable
             cart.addBook(book);
     }
 
-    public void removeBookFromCart(Book book)
+    protected void removeBookFromCart(Book book)
     {
 
     }
 
-    public void followFavouritePublishers(Publisher publisher)
+    protected void followFavouritePublishers(Publisher publisher)
     {
 
     }
 
-    public void unFollowFavouritePublishers(Publisher publisher)
+    protected void unFollowFavouritePublishers(Publisher publisher)
     {
 
     }
 
-
-
-    public void addFavouriteBook(Book book)
+    protected void addFavouriteBook(Book book)
     {
 
     }
 
-    public void removeFavourite(Book book)
+    protected void removeFavourite(Book book)
     {
 
     }
 
-    public void addBookToBookMark(Book book)
+    protected void addBookToBookMark(Book book)
     {
 
     }
 
-    public void removeBookFromBookMark(Book book)
+    protected void removeBookFromBookMark(Book book)
+    {
+
+    }
+
+    protected void scoreBook(Book book)
+    {
+
+    }
+
+    protected void addCommentToBook(Book book)
     {
 
     }

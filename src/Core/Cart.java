@@ -18,22 +18,22 @@ public class Cart implements Serializable
         books = new ArrayList<>();
     }
 
-    public void addBook(Book book)
+    protected void addBook(Book book)
     {
         books.add(book);
     }
 
-    public void removeBook()
+    protected void removeBook()
+    {
+
+    }
+
+    protected void buy()
     {
 
     }
 
     public void calculateTotalCost()
-    {
-
-    }
-
-    public void buy()
     {
 
     }

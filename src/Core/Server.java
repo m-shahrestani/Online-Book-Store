@@ -179,6 +179,16 @@ public class Server
 
     }
 
+    public void customerScoreBook(Book book)
+    {
+
+    }
+
+    public void customerAddCommentToBook(Book book)
+    {
+
+    }
+
     //Publisher Methods
 
     public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
@@ -188,6 +198,16 @@ public class Server
     }
 
     public void publisherRemoveBook(Publisher publisher, Book book)
+    {
+
+    }
+
+    public void publisherIncreaseNumberOFBooks(Book book)
+    {
+
+    }
+
+    public void publisherDecreaseNumberOFBooks(Book book)
     {
 
     }
