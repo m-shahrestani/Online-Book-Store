@@ -11,7 +11,7 @@ public class LoginGUI
 {
     Server server;
 
-    private JFrame jFrame ;
+    private JFrame jFrame;
     private JTextField userName;
     private JTextField password;
     private JButton login;

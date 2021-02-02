@@ -80,6 +80,22 @@ public class Customer implements Serializable
 
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public Cart getCart()
     {
         return cart;

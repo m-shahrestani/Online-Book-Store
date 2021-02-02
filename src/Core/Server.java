@@ -17,6 +17,11 @@ public class Server
         publishers = new ArrayList<>();
         admins = new ArrayList<>();
         books = new ArrayList<>();
+
+        customers.add(new Customer("ali","a"," g","g "));
+        customers.add(new Customer("reza","a","d","g"));
+        customers.add(new Customer("dsg","gd"," g","g"));
+        customers.add(new Customer("sdg","dg","g","g"));
     }
 
     public static void main(String[] args)
