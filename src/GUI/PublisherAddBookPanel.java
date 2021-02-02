@@ -32,6 +32,10 @@ public class PublisherAddBookPanel extends JPanel
         addAllTextFields(constr, this);
         constr.gridx=1; constr.gridy=7;
         add(summeryTextArea, constr);
+        constr.gridx=0; constr.gridy=8;
+        constr.gridwidth = 2;
+        constr.anchor = GridBagConstraints.CENTER;
+        addBookButton(this, constr);
     }
     public void addLabel(String labelDescription, GridBagConstraints constr, JPanel panel, int gridY){
         JLabel label = new JLabel(labelDescription);
@@ -62,5 +66,9 @@ public class PublisherAddBookPanel extends JPanel
         addTextField(editionTextField, constr, panel, 4);
         addTextField(priceTextField, constr, panel, 5);
         addTextField(numberTextField, constr, panel, 6);
+    }
+    public void addBookButton(JPanel panel, GridBagConstraints constr){
+        JButton addBookButton = new JButton("Add Book");
+        panel.add(addBookButton, constr);
     }
 }

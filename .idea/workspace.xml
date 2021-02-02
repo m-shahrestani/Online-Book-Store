@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" afterDir="false" />
     </list>
@@ -63,7 +62,7 @@
       <updated>1612076332508</updated>
       <workItem from="1612076353461" duration="3846000" />
       <workItem from="1612115681202" duration="739000" />
-      <workItem from="1612270197170" duration="3978000" />
+      <workItem from="1612270197170" duration="4483000" />
     </task>
     <servers />
   </component>
