@@ -1,5 +1,8 @@
 package GUI;
 
+import Core.Admin;
+import Core.Customer;
+import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
@@ -10,17 +13,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 public class LoginGUI extends JFrame
 {
-    Server server;
-
+    private Server server;
     private JTextField userNameTextField;
     private JPasswordField passwordTextField;
     private JComboBox typeUser;
     private JButton login;
     private JButton back;
-    private int mod = 0 ;
     //icon address
     private static final String ICON_PATH = "res/icon.png";
 
@@ -36,8 +38,8 @@ public class LoginGUI extends JFrame
         this.server = server;
         userNameTextField = new JTextField(20);
         passwordTextField = new JPasswordField(20);
-        typeUser = new JComboBox(new String[] {"Admin" , "Customer" , "Publisher"});
-        login = new JButton("Sign up");
+        typeUser = new JComboBox(new String[] {"Customer" , "Publisher", "Admin"});
+        login = new JButton("Log in");
         back = new JButton("Back");
 
         //make main panel
@@ -98,11 +100,10 @@ public class LoginGUI extends JFrame
         typeUserPanel1.add(typeUserLabel, BorderLayout.NORTH);
         typeUserPanel1.add(typeUser);
         typeUserLabel.setPreferredSize(new Dimension(50, 50));
-        typeUser.setSelectedIndex(1);
+        typeUser.setSelectedIndex(0);
         typeUser.setPreferredSize(new Dimension(30,30));
         typeUser.setBackground(Color.white);
         typeUser.setSize(20,40);
-        actionHandlerComboBox();
         typeUserPanel.add(typeUserPanel1);
         typeUserPanel.add(typeUserPanel2);
         typeUserPanel.add(typeUserPanel3);
@@ -231,25 +232,77 @@ public class LoginGUI extends JFrame
         buttonPanel.add(buttonPanel2);
     }
 
-    public void actionHandlerComboBox(){
-        typeUser.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                JComboBox comboBox = (JComboBox) event.getSource();
-                Object selected = comboBox.getSelectedItem();
-                if ("Admin".equals(selected)) {
-                    mod = 1;
-                } else if ("Customer".equals(selected)) {
-                    mod = 2;
+    private void login(){
+        String userFieldText = userNameTextField.getText();
+        String passFieldText = passwordTextField.getText();
+
+        if ("Customer".equals(typeUser.getSelectedItem())) {
+            ArrayList<Customer> customers = server.getCustomers();
+            if (userFieldText.equals("") && passFieldText.equals("")) {
+                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+            }
+            else {
+                boolean flag = true;
+                for (Customer temp : customers) {
+                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
+                        new CustomerGUI(server, temp);
+                        setVisible(false); //you can't see me!
+                        dispose();//Destroy the JFrame object
+                        flag = false;
+                    }
                 }
-                else if ("Publisher".equals(selected)) {
-                    mod = 3;
+                if (flag) {
+                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+                    userNameTextField.setText("");
+                    passwordTextField.setText("");
+                    userNameTextField.requestFocus();
                 }
             }
-        });
+        } else if ("Publisher".equals(typeUser.getSelectedItem())) {
+            ArrayList<Publisher> publishers = server.getPublishers();
+            if (userFieldText.equals("") && passFieldText.equals("")) {
+                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+            }
+            else {
+                boolean flag = true;
+                for (Publisher temp : publishers) {
+                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
+                        new PublisherGUI(server, temp);
+                        setVisible(false); //you can't see me!
+                        dispose();//Destroy the JFrame object
+                        flag = false;
+                    }
+                }
+                if (flag) {
+                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+                    userNameTextField.setText("");
+                    passwordTextField.setText("");
+                    userNameTextField.requestFocus();
+                }
+            }
+        }
+        else if ("Admin".equals(typeUser.getSelectedItem())) {
+            ArrayList<Admin> admins = server.getAdmins();
+            if (userFieldText.equals("") && passFieldText.equals("")) {
+                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+            }
+            else {
+                boolean flag = true;
+                for (Admin temp : admins) {
+                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
+                        new AdminGUI(server, temp);
+                        setVisible(false); //you can't see me!
+                        dispose();//Destroy the JFrame object
+                        flag = false;
+                    }
+                }
+                if (flag) {
+                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+                    userNameTextField.setText("");
+                    passwordTextField.setText("");
+                    userNameTextField.requestFocus();
+                }
+            }
+        }
     }
-
-    private void login(){
-
-    }
-
 }
