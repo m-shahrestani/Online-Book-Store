@@ -22,6 +22,10 @@ public class Server
         customers.add(new Customer("reza","a","d","g"));
         customers.add(new Customer("dsg","gd"," g","g"));
         customers.add(new Customer("sdg","dg","g","g"));
+        publishers.add(new Publisher("ali","a", "fd"," g","g "));
+        publishers.add(new Publisher("di","d", "d"," g","g "));
+        publishers.add(new Publisher("fdi","dh", "hd"," gh","g "));
+        publishers.add(new Publisher("hdi","d", "dh"," g","g "));
     }
 
     public static void main(String[] args)

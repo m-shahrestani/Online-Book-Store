@@ -51,9 +51,9 @@ public class CustomerRegisterGUI extends JFrame
         JPanel fake2 = new JPanel();
         fake2.setPreferredSize(new Dimension(100,50));
         JPanel fake3 = new JPanel();
-        fake3.setPreferredSize(new Dimension(50,50));
+        fake3.setPreferredSize(new Dimension(50,70));
         JPanel fake4 = new JPanel();
-        fake4.setPreferredSize(new Dimension(50,50));
+        fake4.setPreferredSize(new Dimension(50,70));
         add(fake1, BorderLayout.WEST);
         add(fake2, BorderLayout.EAST);
         add(fake3, BorderLayout.NORTH);
@@ -330,7 +330,7 @@ public class CustomerRegisterGUI extends JFrame
                 else if (phoneNumberText.equals(temp.getPhoneNumber())) {
                     JOptionPane.showMessageDialog(null, "Phone number is already in use");
                     phoneNumberTextField.setText("");
-                    userNameTextField.requestFocus();
+                    phoneNumberTextField.requestFocus();
                     flag = false;
                 }
             }
