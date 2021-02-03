@@ -25,13 +25,14 @@ public class ShowBooksForPublisherPanel
         return bookInformationLabel;
     }
     public JPanel bookPanelHeader(){
-        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 9));
         bookPanelHeader.add(bookInformationLabel("Book Name"));
         bookPanelHeader.add(bookInformationLabel("Publisher"));
         bookPanelHeader.add(bookInformationLabel("Author"));
         bookPanelHeader.add(bookInformationLabel("Age Rate"));
         bookPanelHeader.add(bookInformationLabel("Subject"));
         bookPanelHeader.add(bookInformationLabel("Edition"));
+        bookPanelHeader.add(bookInformationLabel("Price"));
         bookPanelHeader.add(bookInformationLabel("Number"));
         bookPanelHeader.add(bookInformationLabel(""));
         return bookPanelHeader;
@@ -42,13 +43,14 @@ public class ShowBooksForPublisherPanel
         return bookInformationField;
     }
     public JPanel bookPanel(Book book){
-        JPanel bookPanel = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanel = new JPanel(new GridLayout(1, 9));
         bookPanel.add(bookInformationField(book.getName()));
         bookPanel.add(bookInformationField(book.getPublisher().getName()));
         bookPanel.add(bookInformationField(book.getAuthor()));
         bookPanel.add(bookInformationField(book.getAgeRate()));
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
+        bookPanel.add(bookInformationField(String.valueOf(book.getPrice())));
         bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
         bookPanel.add(showSummery(book));
         return bookPanel;

@@ -20,7 +20,7 @@ public class PublisherGUI extends JFrame
         this.publisher = publisher;
 
         updateBooks();
-
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         showFrame();
     }
 
