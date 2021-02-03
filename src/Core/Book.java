@@ -78,4 +78,32 @@ public class Book implements Serializable
     public int getPrice() {
         return price;
     }
+
+    public String getAgeRate() {
+        return ageRate;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
+    public ArrayList<String> getComments() {
+        return comments;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public double getScoreNumber() {
+        return scoreNumber;
+    }
 }
