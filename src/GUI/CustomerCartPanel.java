@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 
-public class CustomerCartPanel
+public class CustomerCartPanel extends JPanel
 {
     private ArrayList<Book> books;
     private ArrayList<JPanel> bookPanels;

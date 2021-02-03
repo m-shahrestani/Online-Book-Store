@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,8 @@
       <workItem from="1612286419300" duration="1634000" />
       <workItem from="1612330527857" duration="1928000" />
       <workItem from="1612332520881" duration="862000" />
-      <workItem from="1612334478416" duration="1030000" />
+      <workItem from="1612334478416" duration="1777000" />
+      <workItem from="1612336296406" duration="183000" />
     </task>
     <servers />
   </component>
