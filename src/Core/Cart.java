@@ -11,7 +11,6 @@ public class Cart implements Serializable
     private int totalCost = 0;
     private boolean purchased = false;
 
-
     public Cart(String id, Customer customer)
     {
         this.id = id;
@@ -19,12 +18,17 @@ public class Cart implements Serializable
         books = new ArrayList<>();
     }
 
-    public void addBook()
+    protected void addBook(Book book)
+    {
+        books.add(book);
+    }
+
+    protected void removeBook()
     {
 
     }
 
-    public void removeBook()
+    protected void buy()
     {
 
     }
@@ -34,8 +38,28 @@ public class Cart implements Serializable
 
     }
 
-    public void buy()
+    public String getId()
     {
+        return id;
+    }
 
+    public Customer getCustomer()
+    {
+        return customer;
+    }
+
+    public ArrayList<Book> getBooks()
+    {
+        return books;
+    }
+
+    public int getTotalCost()
+    {
+        return totalCost;
+    }
+
+    public boolean isPurchased()
+    {
+        return purchased;
     }
 }

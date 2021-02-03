@@ -1,40 +1,31 @@
 package GUI;
 
-import Core.Book;
 import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PublisherGUI
+public class PublisherGUI extends JFrame
 {
     Server server;
     Publisher publisher;
 
     public PublisherGUI(Server server, Publisher publisher)
     {
+        setTitle("Publisher");
+
         this.server = server;
         this.publisher = publisher;
 
         updateBooks();
-
         showFrame();
     }
 
     private void showFrame()
     {
-        JFrame frame = new JFrame("Publisher Panel");
-        frame.setLayout(new FlowLayout());
-
-        JPanel publisherBooksPanel = new JPanel();
-        JScrollPane publisherBooksScroll = new JScrollPane(publisherBooksPanel);
-
-        JTextField bookNameField = new JTextField("Name");
-        JTextField bookAuthorField = new JTextField("Author");
-        JTextField bookEditionField = new JTextField("Edition");
+        JPanel mainPanel = new JPanel();
 
         JButton addBookButton = new JButton("Add Book");
 
@@ -44,26 +35,24 @@ public class PublisherGUI
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-//                        Book book = new Book(
-//                                bookNameField.getName(),
-//                                bookAuthorField.getText(),
-//                                bookEditionField.getText()
-//                        );
-//                        server.addBook(book);
-//                        publisher.addBook(book);
-                        updateBooks();
+                        PublisherAddBookPanel publisherAddBookPanel = new PublisherAddBookPanel(server, publisher);
                     }
                 }
         );
 
-        frame.add(publisherBooksScroll);
-        frame.add(bookNameField);
-        frame.add(bookAuthorField);
-        frame.add(bookEditionField);
-        frame.add(addBookButton);
+        JButton showBooksButton = new JButton("Show my books");
+        showBooksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ShowBooksForPublisherPanel showBooksForPublisherPanel = new ShowBooksForPublisherPanel(publisher);
+            }
+        });
+        mainPanel.add(addBookButton);
+        mainPanel.add(showBooksButton);
+        add(mainPanel);
 
-        frame.pack();
-        frame.setVisible(true);
+        pack();
+        setVisible(true);
     }
 
     public void updateBooks()

@@ -9,66 +9,46 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CustomerGUI
-{
+public class CustomerGUI extends JFrame{
     Server server;
     Customer customer;
+    JButton books;
+    JButton cart;
 
-    public CustomerGUI(Server server, Customer customer)
-    {
+    public CustomerGUI(Server server, Customer customer) {
+        setTitle("Customer Panel");
         this.server = server;
         this.customer = customer;
 
         showFrame();
     }
 
-    private void showFrame()
-    {
-        JFrame frame = new JFrame("Customer Panel");
-        frame.setLayout(new FlowLayout());
-
-        JPanel databaseBooksPanel = new JPanel();
-        JScrollPane databaseBooksScroll = new JScrollPane(databaseBooksPanel);
-        JPanel cartPanel = new JPanel();
-        JScrollPane cartScroll =  new JScrollPane(cartPanel);
-
-        updateDatabaseBooksPanel(databaseBooksPanel);
-
-        frame.add(databaseBooksScroll);
-        frame.add(cartScroll);
-
-        frame.pack();
-        frame.setVisible(true);
+    private void showFrame() {
+        setLayout(new FlowLayout());
+        books = new JButton("books");
+        cart = new JButton("cart");
+        add(books);
+        add(cart);
+        books.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                booksFrame();
+            }
+        });
+        cart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cartFrame();
+            }
+        });
+        pack();
+        setVisible(true);
     }
 
-    public void updateDatabaseBooksPanel(JPanel databaseBooksPanel)
-    {
-
+    private void booksFrame(){
+        ShowBooksForCustomerPanel showBooksForCustomerPanel = new ShowBooksForCustomerPanel(server, customer);
     }
-
-    public void updateCartPanel(JPanel cartPanel)
-    {
-
-    }
-}
-
-class AddToCartActionListener implements ActionListener
-{
-    Customer customer;
-    Server server;
-    Book book;
-
-    public AddToCartActionListener(Server server, Customer customer, Book book)
-    {
-        this.customer = customer;
-        this.server = server;
-        this.book = book;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e)
-    {
-        //server.addBook();
-        customer.addBookToCart(book);
+    private void cartFrame(){
+        CustomerCartPanel customerCartPanel = new CustomerCartPanel(server, customer);
     }
 }

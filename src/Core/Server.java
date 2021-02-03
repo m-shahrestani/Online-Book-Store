@@ -23,10 +23,14 @@ public class Server
     {
         Server server = new Server();
         server.loadDataBase();
-        BookStoreGUI bookStoreGUI = new BookStoreGUI(server);
+        //look and feel
+        try {
+            javax.swing.UIManager.setLookAndFeel(com.jtattoo.plaf.texture.TextureLookAndFeel.class.getName());
+        } catch (Exception ignored) {}
+        BookStoreGUI bookStoreGUI = BookStoreGUI.getInstance(server);
     }
 
-    //
+    //Server Methods
 
     public void addBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
     {
@@ -52,31 +56,33 @@ public class Server
 
     public void addScoreToBook(Book book, int score)
     {
-        book.addScore(score);
+
     }
 
     public void addComment(Book book, String comment)
     {
-        book.addComment(comment);
+
     }
 
     public void addCustomer(String userName, String password, String phoneNumber, String address)
     {
-
+        Customer newCustomer = new Customer(userName, password, phoneNumber, address);
+        customers.add(newCustomer);
     }
 
     public void addPublisher(String userName, String password, String name, String phoneNumber, String address)
     {
-
+        Publisher newPublisher = new Publisher(userName, password, name, phoneNumber, address);
+        publishers.add(newPublisher);
     }
 
     public void addAdmin(String userName, String password, Server server)
     {
-
+        Admin newAdmin = new Admin(userName, password, server);
+        admins.add(newAdmin);
     }
 
-
-    private void saveDataBase()
+    public void saveDataBase()
     {
 
     }
@@ -101,7 +107,7 @@ public class Server
 
     }
 
-    private void loadDataBase()
+    public void loadDataBase()
     {
 
     }
@@ -130,18 +136,17 @@ public class Server
 
     public void customerEditAccountInfo(Customer customer, String password, String address, String phoneNumber)
     {
-        customer.editAccountInfo(password, address, phoneNumber);
+
     }
 
     public void purchase(Customer customer)
     {
-        customer.purchase();
-        Cart cart = customer.getCart();
+
     }
 
     public void customerAddBookToCart(Customer customer, Book book)
     {
-
+        customer.addBookToCart(book);
     }
 
     public void customerRemoveBookFromCart(Customer customer, Book book)
@@ -179,14 +184,35 @@ public class Server
 
     }
 
-    //Publisher Methods
-
-    public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
+    public void customerScoreBook(Book book)
     {
 
     }
 
+    public void customerAddCommentToBook(Book book)
+    {
+
+    }
+
+    //Publisher Methods
+
+    public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
+    {
+        Book newBook = new Book(name, publisher, author, ageRate, subject, edition, price, number, summery);
+        publisher.addBook(newBook);
+    }
+
     public void publisherRemoveBook(Publisher publisher, Book book)
+    {
+
+    }
+
+    public void publisherIncreaseNumberOFBooks(Book book)
+    {
+
+    }
+
+    public void publisherDecreaseNumberOFBooks(Book book)
     {
 
     }
@@ -224,19 +250,9 @@ public class Server
 
     }
 
-    public Customer getCustomer(String name)
-    {
-        return null;
-    }
-
-    public Publisher getPublisher(String name)
-    {
-        return null;
-    }
-
     public ArrayList<Book> getBooks()
     {
-        return  null;
+        return  books;
     }
 
     public ArrayList<Customer> getCustomers()

@@ -28,17 +28,27 @@ public class Publisher implements Serializable
         books = new ArrayList<>();
     }
 
-    public void addBook(Book book)
+    protected void addBook(Book book)
+    {
+        books.add(book);
+    }
+
+    protected void removeBook(Book book)
     {
 
     }
 
-    public void removeBook(Book book)
+    protected void increaseNumberOFBooks(Book book, int number)
     {
 
     }
 
-    public void sell(Customer customer, Book book)
+    protected void decreaseNumberOFBooks(Book book, int number)
+    {
+
+    }
+
+    protected void sell(Customer customer, Book book)
     {
 
     }
@@ -53,19 +63,29 @@ public class Publisher implements Serializable
         return null;
     }
 
-    public void setCommission(int commission)
+    protected void setCommission(int commission)
     {
 
     }
 
-    public void setDiscountConst(int discountConst)
+    protected void setDiscountConst(int discountConst)
     {
 
     }
 
-    public void editAccountInfo(String password, String address, String phoneNumber)
+    protected void editAccountInfo(String password, String address, String phoneNumber)
     {
 
+    }
+
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    public String getPassword()
+    {
+        return password;
     }
 
     public String getName()
@@ -73,8 +93,38 @@ public class Publisher implements Serializable
         return name;
     }
 
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public int getSales()
+    {
+        return sales;
+    }
+
+    public HashMap<Customer, ArrayList<Book>> getCustomersInfo()
+    {
+        return customersInfo;
+    }
+
     public ArrayList<Book> getBooks()
     {
         return books;
+    }
+
+    public double getCommission()
+    {
+        return commission;
+    }
+
+    public int getDiscountConst()
+    {
+        return discountConst;
     }
 }
