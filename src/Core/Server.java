@@ -28,17 +28,18 @@ public class Server
         publishers.add(new Publisher("hdi","d", "dh"," g","g "));
         admins.add(new Admin("a", "a", this));
         admins.add(new Admin("d", "a", this));
-
     }
 
     public static void main(String[] args)
     {
         Server server = new Server();
         server.loadDataBase();
-        BookStoreGUI bookStoreGUI = new BookStoreGUI(server);
+        //look and feel
+        try {
+            javax.swing.UIManager.setLookAndFeel(com.jtattoo.plaf.texture.TextureLookAndFeel.class.getName());
+        } catch (Exception ignored) {}
+        BookStoreGUI bookStoreGUI = BookStoreGUI.getInstance(server);
     }
-
-    //
 
     public void addBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
     {

@@ -1,20 +1,18 @@
 package GUI;
 
-import Core.Customer;
 import Core.Publisher;
 import Core.Server;
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class PublisherRegisterGUI extends JFrame
 {
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
     private Server server;
     private JTextField userNameTextField;
     private JTextField passwordTextField;
@@ -23,17 +21,14 @@ public class PublisherRegisterGUI extends JFrame
     private JTextField addressTextField;
     private JButton signUp;
     private JButton back;
-    //icon address
-    private static final String ICON_PATH = "res/icon.png";
 
-    public PublisherRegisterGUI(Server server)
-    {
+    public PublisherRegisterGUI(Server server) {
         ImageIcon icon = new ImageIcon(ICON_PATH);
         setIconImage(icon.getImage());
         setTitle("Publisher Register");
         setSize(700,400);
         setLocation(300, 200);
-        setBackground(Color.white);
+        setResizable(false);
 
         this.server = server;
         userNameTextField = new JTextField(20);
@@ -57,6 +52,11 @@ public class PublisherRegisterGUI extends JFrame
         fake3.setPreferredSize(new Dimension(50,50));
         JPanel fake4 = new JPanel();
         fake4.setPreferredSize(new Dimension(50,50));
+        Color backgroundColor = new Color(12,21,20);
+        fake1.setBackground(backgroundColor);
+        fake2.setBackground(backgroundColor);
+        fake3.setBackground(backgroundColor);
+        fake4.setBackground(backgroundColor);
         add(fake1, BorderLayout.WEST);
         add(fake2, BorderLayout.EAST);
         add(fake3, BorderLayout.NORTH);
@@ -68,7 +68,7 @@ public class PublisherRegisterGUI extends JFrame
 
     private void makeMainPanel(JPanel mainPanel){
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-        mainPanel.setBorder(new TitledBorder( new LineBorder(new Color(225,225,225)), "Publisher Register"));
+        mainPanel.setBorder(new TitledBorder( new LineBorder(new Color(20,20,20)), "Publisher Register"));
 
         //user panel
         JPanel userPanel = new JPanel();
@@ -338,20 +338,9 @@ public class PublisherRegisterGUI extends JFrame
         buttonPanel2.setLayout(new BoxLayout(buttonPanel2, BoxLayout.X_AXIS));
         buttonPanel2.setPreferredSize(new Dimension(50, 30));
         signUp.setBackground(new Color(225,225,225));
-        signUp.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                signUp();
-            }
-        });
+        signUp.addActionListener(e -> signUp());
         back.setBackground(Color.white);
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false); //you can't see me!
-                dispose();//Destroy the JFrame object
-            }
-        });
+        back.addActionListener(e -> back());
         buttonPanel2.add(signUp, BorderLayout.WEST);
         buttonPanel2.add(back, BorderLayout.EAST);
         buttonPanel.add(buttonPanel1);
@@ -414,5 +403,10 @@ public class PublisherRegisterGUI extends JFrame
                 dispose();//Destroy the JFrame object
             }
         }
+    }
+
+    private void back(){
+        setVisible(false); //you can't see me!
+        dispose();//Destroy the JFrame object
     }
 }

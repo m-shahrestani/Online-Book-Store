@@ -1,27 +1,24 @@
 package GUI;
 
 import Core.Admin;
-import Core.Customer;
 import Core.Server;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class AdminRegisterGUI extends JFrame
 {
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
     private Server server;
     private JTextField userNameTextField;
     private JPasswordField passwordTextField;
     private JButton signUp;
     private JButton back;
-    //icon address
-    private static final String ICON_PATH = "res/icon.png";
 
     public AdminRegisterGUI(Server server)
     {
@@ -30,7 +27,7 @@ public class AdminRegisterGUI extends JFrame
         setTitle("Admin Register");
         setSize(700,400);
         setLocation(300, 200);
-        setBackground(Color.white);
+        setResizable(false);
 
         this.server = server;
         userNameTextField = new JTextField(20);
@@ -44,13 +41,18 @@ public class AdminRegisterGUI extends JFrame
 
         //add panels
         JPanel fake1 = new JPanel();
-        fake1.setPreferredSize(new Dimension(100,50));
+        fake1.setPreferredSize(new Dimension(200,50));
         JPanel fake2 = new JPanel();
-        fake2.setPreferredSize(new Dimension(100,50));
+        fake2.setPreferredSize(new Dimension(200,50));
         JPanel fake3 = new JPanel();
-        fake3.setPreferredSize(new Dimension(50,100));
+        fake3.setPreferredSize(new Dimension(50,90));
         JPanel fake4 = new JPanel();
-        fake4.setPreferredSize(new Dimension(50,100));
+        fake4.setPreferredSize(new Dimension(50,90));
+        Color backgroundColor = new Color(12,21,20);
+        fake1.setBackground(backgroundColor);
+        fake2.setBackground(backgroundColor);
+        fake3.setBackground(backgroundColor);
+        fake4.setBackground(backgroundColor);
         add(fake1, BorderLayout.WEST);
         add(fake2, BorderLayout.EAST);
         add(fake3, BorderLayout.NORTH);
@@ -62,7 +64,7 @@ public class AdminRegisterGUI extends JFrame
 
     private void makeMainPanel(JPanel mainPanel){
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-        mainPanel.setBorder(new TitledBorder( new LineBorder(new Color(225,225,225)), "Admin Register"));
+        mainPanel.setBorder(new TitledBorder( new LineBorder(new Color(20,20,20)), "Admin Register"));
 
         //user panel
         JPanel userPanel = new JPanel();
@@ -84,7 +86,6 @@ public class AdminRegisterGUI extends JFrame
         JLabel userNameLabel = new JLabel(" Username", SwingConstants.LEFT);
         userPanel.setLayout(new GridLayout(1,2));
         JPanel userPanel1 = new JPanel();
-        JPanel userPanel2 = new JPanel();
         userPanel1.setLayout(new GridLayout(2,1));
         userPanel1.add(userNameLabel, BorderLayout.NORTH);
         userPanel1.add(userNameTextField);
@@ -124,14 +125,12 @@ public class AdminRegisterGUI extends JFrame
             }
         });
         userPanel.add(userPanel1);
-        userPanel.add(userPanel2);
     }
 
     private void makePassPanel(JPanel passPanel) {
         JLabel passwordLabel = new JLabel(" Password", SwingConstants.LEFT);
         passPanel.setLayout(new GridLayout(1,2));
         JPanel passPanel1 = new JPanel();
-        JPanel passPanel2 = new JPanel();
         passPanel1.setLayout(new GridLayout(2,1));
         passPanel1.add(passwordLabel, BorderLayout.NORTH);
         passPanel1.add(passwordTextField);
@@ -171,7 +170,6 @@ public class AdminRegisterGUI extends JFrame
             }
         });
         passPanel.add(passPanel1);
-        passPanel.add(passPanel2);
     }
 
     private void makeButtonPanel(JPanel buttonPanel) {
@@ -181,20 +179,9 @@ public class AdminRegisterGUI extends JFrame
         buttonPanel2.setLayout(new BoxLayout(buttonPanel2, BoxLayout.X_AXIS));
         buttonPanel2.setPreferredSize(new Dimension(50, 30));
         signUp.setBackground(new Color(225,225,225));
-        signUp.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                signUp();
-            }
-        });
+        signUp.addActionListener(e -> signUp());
         back.setBackground(Color.white);
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false); //you can't see me!
-                dispose();//Destroy the JFrame object
-            }
-        });
+        back.addActionListener(e -> back());
         buttonPanel2.add(signUp, BorderLayout.WEST);
         buttonPanel2.add(back, BorderLayout.EAST);
         buttonPanel.add(buttonPanel1);
@@ -233,5 +220,10 @@ public class AdminRegisterGUI extends JFrame
                 dispose();//Destroy the JFrame object
             }
         }
+    }
+
+    private void back(){
+        setVisible(false); //you can't see me!
+        dispose();//Destroy the JFrame object
     }
 }
