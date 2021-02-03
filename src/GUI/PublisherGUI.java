@@ -20,7 +20,6 @@ public class PublisherGUI extends JFrame
         this.publisher = publisher;
 
         updateBooks();
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         showFrame();
     }
 
@@ -28,9 +27,7 @@ public class PublisherGUI extends JFrame
     {
         JFrame frame = new JFrame("Publisher Panel");
         frame.setLayout(new FlowLayout());
-
-        JPanel publisherBooksPanel = new JPanel();
-        JScrollPane publisherBooksScroll = new JScrollPane(publisherBooksPanel);
+        JPanel mainPanel = new JPanel();
 
         JTextField bookNameField = new JTextField("Name");
         JTextField bookAuthorField = new JTextField("Author");
@@ -44,9 +41,9 @@ public class PublisherGUI extends JFrame
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-                        publisherBooksPanel.removeAll();
-                        publisherBooksPanel.revalidate();
-                        publisherBooksPanel.repaint();
+                        mainPanel.removeAll();
+                        mainPanel.revalidate();
+                        mainPanel.repaint();
                         PublisherAddBookPanel publisherAddBookPanel = new PublisherAddBookPanel();
                         add(publisherAddBookPanel);
                         publisherAddBookPanel.updateUI();
@@ -59,11 +56,25 @@ public class PublisherGUI extends JFrame
                 }
         );
 
-        frame.add(publisherBooksScroll);
-        frame.add(bookNameField);
-        frame.add(bookAuthorField);
-        frame.add(bookEditionField);
-        frame.add(addBookButton);
+        JButton showBooksButton = new JButton("Show my books");
+        showBooksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainPanel.removeAll();
+                mainPanel.revalidate();
+                mainPanel.repaint();
+                ShowBooksForPublisherPanel showBooksForPublisherPanel = new ShowBooksForPublisherPanel(publisher.getBooks());
+                JPanel publisherBooksPanel = showBooksForPublisherPanel.showAllPublisherBook();
+                JScrollPane publisherBooksScroll = new JScrollPane(publisherBooksPanel);
+                add(publisherBooksScroll);
+                publisherBooksPanel.updateUI();
+                revalidate();
+                repaint();
+            }
+        });
+        mainPanel.add(addBookButton);
+        mainPanel.add(showBooksButton);
+        frame.add(mainPanel);
 
         frame.pack();
         frame.setVisible(true);

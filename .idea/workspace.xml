@@ -4,7 +4,6 @@
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
       <workItem from="1612297544123" duration="8474000" />
       <workItem from="1612332353443" duration="200000" />
       <workItem from="1612332879757" duration="862000" />
-      <workItem from="1612340112058" duration="673000" />
+      <workItem from="1612340112058" duration="2190000" />
     </task>
     <servers />
   </component>
