@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PublisherGUI
+public class PublisherGUI extends JFrame
 {
     Server server;
     Publisher publisher;
@@ -44,14 +44,17 @@ public class PublisherGUI
                     @Override
                     public void actionPerformed(ActionEvent e)
                     {
-//                        Book book = new Book(
-//                                bookNameField.getName(),
-//                                bookAuthorField.getText(),
-//                                bookEditionField.getText()
-//                        );
-//                        server.addBook(book);
-//                        publisher.addBook(book);
-                        updateBooks();
+                        publisherBooksPanel.removeAll();
+                        publisherBooksPanel.revalidate();
+                        publisherBooksPanel.repaint();
+                        PublisherAddBookPanel publisherAddBookPanel = new PublisherAddBookPanel();
+                        add(publisherAddBookPanel);
+                        publisherAddBookPanel.updateUI();
+                        revalidate();
+                        repaint();
+                        server.addBook(publisherAddBookPanel.getNameTextField(), publisher, publisherAddBookPanel.getAuthorTextField(), publisherAddBookPanel.getAgeRateTextField(), publisherAddBookPanel.getSubjectTextField(), publisherAddBookPanel.getEditionTextField(), publisherAddBookPanel.getPriceTextField(), publisherAddBookPanel.getNumberTextField(), publisherAddBookPanel.getSummeryTextArea());
+                        //publisher.addBook(book);
+                        //updateBooks();
                     }
                 }
         );

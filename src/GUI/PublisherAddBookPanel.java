@@ -2,6 +2,8 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PublisherAddBookPanel extends JPanel
 {
@@ -70,5 +72,37 @@ public class PublisherAddBookPanel extends JPanel
     public void addBookButton(JPanel panel, GridBagConstraints constr){
         JButton addBookButton = new JButton("Add Book");
         panel.add(addBookButton, constr);
+    }
+
+    public String getNameTextField() {
+        return nameTextField.getText();
+    }
+
+    public String getAuthorTextField() {
+        return authorTextField.getText();
+    }
+
+    public String getAgeRateTextField() {
+        return ageRateTextField.getText();
+    }
+
+    public String getSubjectTextField() {
+        return subjectTextField.getText();
+    }
+
+    public String getEditionTextField() {
+        return editionTextField.getText();
+    }
+
+    public int getPriceTextField() {
+        return Integer.parseInt(priceTextField.getText());
+    }
+
+    public int getNumberTextField() {
+        return Integer.parseInt(numberTextField.getText());
+    }
+
+    public String getSummeryTextArea() {
+        return summeryTextArea.getText();
     }
 }
