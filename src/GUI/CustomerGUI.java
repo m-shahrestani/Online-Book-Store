@@ -13,7 +13,7 @@ public class CustomerGUI
 {
     Server server;
     Customer customer;
-    JButton buy ;
+    JButton books ;
     JButton cart;
 
     public CustomerGUI(Server server, Customer customer)
@@ -29,16 +29,7 @@ public class CustomerGUI
         JFrame frame = new JFrame("Customer Panel");
         frame.setLayout(new FlowLayout());
 
-        JPanel databaseBooksPanel = new JPanel();
-        JScrollPane databaseBooksScroll = new JScrollPane(databaseBooksPanel);
-        JPanel cartPanel = new JPanel();
-        JScrollPane cartScroll =  new JScrollPane(cartPanel);
-
-        updateDatabaseBooksPanel(databaseBooksPanel);
-
-        frame.add(databaseBooksScroll);
-        frame.add(cartScroll);
-
+       
         frame.pack();
         frame.setVisible(true);
     }
