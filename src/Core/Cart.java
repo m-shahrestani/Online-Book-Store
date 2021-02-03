@@ -38,4 +38,8 @@ public class Cart implements Serializable
     {
 
     }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
 }

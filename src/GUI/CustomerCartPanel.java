@@ -81,8 +81,8 @@ public class CustomerCartPanel extends JPanel
         gridLayout.setVgap(7);
         mainPanel.setLayout(gridLayout);
         mainPanel.add(bookPanelHeader());
-        for (int i = 0 ; i < books.size() ; i++){
-            bookPanels.add(bookPanel(books.get(i)));
+        for (int i = 0 ; i < cart.getBooks().size() ; i++){
+            bookPanels.add(bookPanel(cart.getBooks().get(i)));
             mainPanel.add(bookPanels.get(i));
         }
         return mainPanel;
