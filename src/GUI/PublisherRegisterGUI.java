@@ -375,7 +375,7 @@ public class PublisherRegisterGUI extends JFrame
         }
         else {
             int returnValue;
-            returnValue = server.addCustomer(userNameText, passwordText, phoneNumberText, addressText);
+            returnValue = server.addPublisher(userNameText, passwordText, nameText, phoneNumberText, addressText);
             if (returnValue == 1) {
                 JOptionPane.showMessageDialog(null, "Username is already in use");
                 userNameTextField.setText("");

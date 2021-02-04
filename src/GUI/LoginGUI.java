@@ -242,7 +242,6 @@ public class LoginGUI extends JFrame
             }
             else if ("Publisher".equals(typeUser.getSelectedItem()))
             {
-
                 Publisher publisherInServer = server.publisherLogin(userFieldText, passFieldText);
                 if (publisherInServer != null)
                 {
