@@ -11,15 +11,17 @@ import java.util.ArrayList;
 
 public class ShowBooksForPublisherPanel extends JFrame
 {
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
     private Publisher publisher;
     private ArrayList<Book> books;
     private ArrayList<JPanel> bookPanels;
-    //Book panel includes a book
 
     public ShowBooksForPublisherPanel(Publisher publisher)
     {
-        setTitle("Publisher's Books");
-
+        setTitle(publisher.getName() + " -Publisher's Books");
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        setIconImage(icon.getImage());
         this.publisher = publisher;
         bookPanels = new ArrayList<>();
         JPanel panel = showAllPublisherBook();

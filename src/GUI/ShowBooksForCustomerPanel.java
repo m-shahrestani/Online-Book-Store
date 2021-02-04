@@ -13,15 +13,18 @@ import java.util.HashMap;
 
 public class ShowBooksForCustomerPanel extends JFrame
 {
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
     private Server server;
     private ArrayList<Book> books;
     private ArrayList<JPanel> bookPanels;
     private Customer customer;
-    //Book panel includes a button and a book
 
     public ShowBooksForCustomerPanel(Server server,Customer customer)
     {
         setTitle("Books");
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        setIconImage(icon.getImage());
 
         this.server = server;
         bookPanels = new ArrayList<>();

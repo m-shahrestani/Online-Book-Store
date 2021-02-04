@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 
 public class PublisherAddBookPanel extends JFrame
 {
+    //icon address
+    private static final String ICON_PATH = "res/icon.png";
     private Server server;
     private Publisher publisher;
     private JTextField nameTextField;
@@ -24,6 +26,10 @@ public class PublisherAddBookPanel extends JFrame
 
     public PublisherAddBookPanel(Server server, Publisher publisher)
     {
+        setTitle(publisher.getName() + " -Add book");
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        setIconImage(icon.getImage());
+
         this.server = server;
         this.publisher = publisher;
 
@@ -40,12 +46,15 @@ public class PublisherAddBookPanel extends JFrame
         priceTextField = new JTextField(20);
         numberTextField = new JTextField(20);
         summeryTextArea = new JTextArea(5,20);
+        JScrollPane textAreaScrollPane = new JScrollPane(summeryTextArea);
+        textAreaScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        textAreaScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         addBookButton = new JButton("Add Book");
 
         addAllLabels(constr, mainPanel);
         addAllTextFields(constr, mainPanel);
         constr.gridx=1; constr.gridy=7;
-        mainPanel.add(summeryTextArea, constr);
+        mainPanel.add(textAreaScrollPane, constr);
         constr.gridx=0; constr.gridy=8;
         constr.gridwidth = 2;
         constr.anchor = GridBagConstraints.CENTER;

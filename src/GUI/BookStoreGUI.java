@@ -4,8 +4,8 @@ import Core.Server;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class BookStoreGUI extends JFrame
 {
@@ -32,6 +32,13 @@ public class BookStoreGUI extends JFrame
         setSize(750,336);
         setLocation(5, 5);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+            super.windowClosing(e);
+            server.saveDataBase();
+            }
+        });
         setResizable(false);
 
         this.server = server;
@@ -167,6 +174,7 @@ public class BookStoreGUI extends JFrame
     }
 
     private void exit(){
+        server.saveDataBase();
         setVisible(false); //you can't see me!
         dispose();//Destroy the JFrame object
         System.exit(0);

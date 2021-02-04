@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class CustomerCartPanel extends JFrame
 {
+    private static final String ICON_PATH = "res/icon.png";
     private Server server;
     private ArrayList<JPanel> bookPanels;
     private Cart cart;
@@ -22,7 +23,9 @@ public class CustomerCartPanel extends JFrame
 
     public CustomerCartPanel(Server server, Customer customer)
     {
-        setTitle("Cart");
+        setTitle(customer.getUserName() + " -Cart");
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        setIconImage(icon.getImage());
 
         this.server = server;
         bookPanels = new ArrayList<>();
@@ -66,22 +69,10 @@ public class CustomerCartPanel extends JFrame
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
         bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
-        //JButton jButton = new JButton("add to cart");
-        //bookPanel.add(jButton);
-        bookPanel.add(addButton(book));
+
         return bookPanel;
     }
 
-    public JButton addButton(Book book){
-        JButton buy = new JButton("buy");
-        buy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                server.purchase(customer);
-            }
-        });
-        return buy;
-    }
 
     public JPanel showCart(){
         this.cart = customer.getCart();
@@ -91,17 +82,25 @@ public class CustomerCartPanel extends JFrame
         gridLayout.setRows(20);
         gridLayout.setVgap(7);
         mainPanel.setLayout(gridLayout);
+
+        JPanel jPanel = new JPanel();
+        JButton buy = new JButton("buy");
+        buy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                server.purchase(customer);
+            }
+        });
+        jPanel.add(buy);
+        mainPanel.add(jPanel);
+
         mainPanel.add(bookPanelHeader());
-        System.out.println(1);
         if (cart != null) {
-            System.out.println(2);
             for (int i = 0 ; i < cart.getBooks().size() ; i++){
                 bookPanels.add(bookPanel(cart.getBooks().get(i)));
                 mainPanel.add(bookPanels.get(i));
-                System.out.println(3);
             }
         }
-        System.out.println(4);
         return mainPanel;
     }
 }
