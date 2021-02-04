@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +82,25 @@
       <workItem from="1612268140638" duration="60000" />
       <workItem from="1612357568320" duration="8652000" />
       <workItem from="1612374208973" duration="1145000" />
-      <workItem from="1612426107165" duration="2839000" />
+      <workItem from="1612426107165" duration="3263000" />
+      <workItem from="1612432198493" duration="265000" />
     </task>
+    <task id="LOCAL-00001" summary="Write login methods in server and refactor register methods">
+      <created>1612429519243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612429519243</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Write login methods in server and refactor register methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write login methods in server and refactor register methods" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
@@ -109,26 +119,26 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612357909290" />
-    <state width="1876" height="125" key="GridCell.Tab.0.bottom" timestamp="1612429380700">
+    <state width="1876" height="125" key="GridCell.Tab.0.bottom" timestamp="1612429803011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="255" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612366176919" />
-    <state width="1876" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612429380700" />
-    <state width="1876" height="125" key="GridCell.Tab.0.center" timestamp="1612429380699">
+    <state width="1876" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612429803011" />
+    <state width="1876" height="125" key="GridCell.Tab.0.center" timestamp="1612429803011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="255" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612366176918" />
-    <state width="1876" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612429380699" />
-    <state width="1876" height="125" key="GridCell.Tab.0.left" timestamp="1612429380699">
+    <state width="1876" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612429803011" />
+    <state width="1876" height="125" key="GridCell.Tab.0.left" timestamp="1612429803011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="255" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612366176918" />
-    <state width="1876" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612429380699" />
-    <state width="1876" height="125" key="GridCell.Tab.0.right" timestamp="1612429380699">
+    <state width="1876" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612429803011" />
+    <state width="1876" height="125" key="GridCell.Tab.0.right" timestamp="1612429803011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="255" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612366176919" />
-    <state width="1876" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612429380699" />
+    <state width="1876" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612429803011" />
     <state x="120" y="67" key="SettingsEditor" timestamp="1612357914273">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

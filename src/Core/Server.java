@@ -42,8 +42,8 @@ public class Server
                 return;
         }
 
-        books.add(newBook);
         publisher.addBook(newBook);
+        books.add(newBook);
     }
 
     public void sellCart(Cart cart)
@@ -282,12 +282,6 @@ public class Server
     }
 
     //Publisher Methods
-
-    public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
-    {
-        Book newBook = new Book(name, publisher, author, ageRate, subject, edition, price, number, summery);
-        publisher.addBook(newBook);
-    }
 
     public void publisherRemoveBook(Publisher publisher, Book book)
     {

@@ -21,6 +21,7 @@ public class Cart implements Serializable
     protected void addBook(Book book)
     {
         books.add(book);
+        calculateTotalCost();
     }
 
     protected void removeBook()
@@ -33,7 +34,7 @@ public class Cart implements Serializable
 
     }
 
-    public int calculateTotalCost()
+    public void calculateTotalCost()
     {
         int sum = 0;
         for (Book book : books)
@@ -41,7 +42,7 @@ public class Cart implements Serializable
             sum += book.getPrice();
         }
 
-        return sum;
+        this.totalCost = sum;
     }
 
     public String getId()
