@@ -88,13 +88,21 @@ public class Server
         return 0;
     }
 
-    public void addPublisher(String userName, String password, String name, String phoneNumber, String address)
+    public int addPublisher(String userName, String password, String name, String phoneNumber, String address)
     {
         Publisher newPublisher = new Publisher(userName, password, name, phoneNumber, address);
-        if (!isDuplicateUserName(userName))
+
+        if (isDuplicateUserName(userName))
         {
-            publishers.add(newPublisher);
+            return 1;
         }
+        else if (isDuplicatePhoneNumber(phoneNumber))
+        {
+            return 2;
+        }
+        publishers.add(newPublisher);
+
+        return 0;
     }
 
     public void addAdmin(String userName, String password, Server server)

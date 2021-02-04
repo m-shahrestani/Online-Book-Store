@@ -329,7 +329,7 @@ public class CustomerRegisterGUI extends JFrame
                 phoneNumberTextField.setText("");
                 phoneNumberTextField.requestFocus();
             }
-            if (returnValue == 0) {
+            else if (returnValue == 0) {
                 JOptionPane.showMessageDialog(null, "Account has been created.");
                 setVisible(false);
                 dispose();

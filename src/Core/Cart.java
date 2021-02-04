@@ -34,7 +34,7 @@ public class Cart implements Serializable
 
     }
 
-    public void calculateTotalCost()
+    private void calculateTotalCost()
     {
         int sum = 0;
         for (Book book : books)

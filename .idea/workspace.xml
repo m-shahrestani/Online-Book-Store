@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +85,8 @@
       <workItem from="1612357568320" duration="8652000" />
       <workItem from="1612374208973" duration="1145000" />
       <workItem from="1612426107165" duration="3263000" />
-      <workItem from="1612432198493" duration="265000" />
+      <workItem from="1612432198493" duration="389000" />
+      <workItem from="1612441306903" duration="1579000" />
     </task>
     <task id="LOCAL-00001" summary="Write login methods in server and refactor register methods">
       <created>1612429519243</created>
@@ -92,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612429519243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Write calculateTotalCost in Cart.java">
+      <created>1612432511785</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612432511785</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +110,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Write login methods in server and refactor register methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write login methods in server and refactor register methods" />
+    <MESSAGE value="Write calculateTotalCost in Cart.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write calculateTotalCost in Cart.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="72" y="201" key="#Project_Structure" timestamp="1612076406389">
@@ -111,14 +122,15 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="328" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1612362013616" />
-    <state x="563" y="113" key="CommitChangelistDialog2" timestamp="1612429517853">
+    <state x="563" y="113" key="CommitChangelistDialog2" timestamp="1612443778556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612429517853" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612357909290">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="563" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612443778556" />
+    <state x="630" y="261" key="FileChooserDialogImpl" timestamp="1612441377811">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612357909290" />
+    <state x="630" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612441377811" />
     <state width="1876" height="125" key="GridCell.Tab.0.bottom" timestamp="1612429803011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
