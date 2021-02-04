@@ -4,28 +4,31 @@ import Core.Publisher;
 import Core.Server;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PublisherGUI extends JFrame
 {
-    Server server;
-    Publisher publisher;
+    private static final String userIcon  = "res/userIcon.png";
+    private Server server;
+    private Publisher publisher;
 
     public PublisherGUI(Server server, Publisher publisher)
     {
-        setTitle("Publisher");
+        setTitle(publisher.getName()+" Publisher");
 
         this.server = server;
         this.publisher = publisher;
 
-        updateBooks();
+
         showFrame();
     }
 
     private void showFrame()
     {
-        JPanel mainPanel = new JPanel();
+
 
         JButton addBookButton = new JButton("Add Book");
 
@@ -47,16 +50,29 @@ public class PublisherGUI extends JFrame
                 ShowBooksForPublisherPanel showBooksForPublisherPanel = new ShowBooksForPublisherPanel(publisher);
             }
         });
-        mainPanel.add(addBookButton);
-        mainPanel.add(showBooksButton);
-        add(mainPanel);
-
-        pack();
+        publisherInformation(addBookButton, showBooksButton);
+        setSize(500, 500);
         setVisible(true);
     }
 
-    public void updateBooks()
+    public void publisherInformation(JButton addBookButton, JButton showBooksButton)
     {
-
+        JPanel info= new JPanel(new FlowLayout(FlowLayout.LEFT));
+        info.setBackground(Color.pink);
+        ImageIcon icon = new ImageIcon(new ImageIcon(userIcon).getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
+        JLabel iconLabel = new JLabel(icon);
+        info.add(iconLabel);
+        JLabel usernameLabel = new JLabel(publisher.getUserName());
+        info.add(usernameLabel);
+        JPanel buttonPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridwidth = GridBagConstraints.REMAINDER;
+        gridBagConstraints.anchor = GridBagConstraints.NORTH;
+        gridBagConstraints.anchor = GridBagConstraints.CENTER;
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        buttonPanel.add(addBookButton, gridBagConstraints);
+        buttonPanel.add(showBooksButton, gridBagConstraints);
+        add(info, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.CENTER);
     }
 }
