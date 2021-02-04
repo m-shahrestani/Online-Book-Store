@@ -317,27 +317,22 @@ public class CustomerRegisterGUI extends JFrame
             JOptionPane.showMessageDialog(null, "Please Enter Address");
         }
         else {
-            boolean flag = true;
-            for (Customer temp : server.getCustomers()) {
-                if (userNameText.equals(temp.getUserName())) {
-                    JOptionPane.showMessageDialog(null, "Username is already in use");
-                    userNameTextField.setText("");
-                    passwordTextField.setText("");
-                    userNameTextField.requestFocus();
-                    flag = false;
-                }
-                else if (phoneNumberText.equals(temp.getPhoneNumber())) {
-                    JOptionPane.showMessageDialog(null, "Phone number is already in use");
-                    phoneNumberTextField.setText("");
-                    phoneNumberTextField.requestFocus();
-                    flag = false;
-                }
+            int returnValue;
+            returnValue = server.addCustomer(userNameText, passwordText, phoneNumberText, addressText);
+            if (returnValue == 1) {
+                JOptionPane.showMessageDialog(null, "Username is already in use");
+                userNameTextField.setText("");
+                userNameTextField.requestFocus();
             }
-            if (flag) {
+            else if (returnValue == 2) {
+                JOptionPane.showMessageDialog(null, "Phone number is already in use");
+                phoneNumberTextField.setText("");
+                phoneNumberTextField.requestFocus();
+            }
+            if (returnValue == 0) {
                 JOptionPane.showMessageDialog(null, "Account has been created.");
-                server.addCustomer(userNameText, passwordText, phoneNumberText, addressText);
-                setVisible(false); //you can't see me!
-                dispose();//Destroy the JFrame object
+                setVisible(false);
+                dispose();
             }
         }
     }

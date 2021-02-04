@@ -33,9 +33,15 @@ public class Cart implements Serializable
 
     }
 
-    public void calculateTotalCost()
+    public int calculateTotalCost()
     {
+        int sum = 0;
+        for (Book book : books)
+        {
+            sum += book.getPrice();
+        }
 
+        return sum;
     }
 
     public String getId()

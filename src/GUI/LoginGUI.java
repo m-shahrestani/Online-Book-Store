@@ -223,75 +223,58 @@ public class LoginGUI extends JFrame
         String userFieldText = userNameTextField.getText();
         String passFieldText = passwordTextField.getText();
 
-        if ("Customer".equals(typeUser.getSelectedItem())) {
-            ArrayList<Customer> customers = server.getCustomers();
-            if (userFieldText.equals("") && passFieldText.equals("")) {
-                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
-            }
-            else {
-                boolean flag = true;
-                for (Customer temp : customers) {
-                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
-                        new CustomerGUI(server, temp);
-                        setVisible(false); //you can't see me!
-                        dispose();//Destroy the JFrame object
-                        flag = false;
-                    }
-                }
-                if (flag) {
-                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
-                    userNameTextField.setText("");
-                    passwordTextField.setText("");
-                    userNameTextField.requestFocus();
-                }
-            }
-        } else if ("Publisher".equals(typeUser.getSelectedItem())) {
-            ArrayList<Publisher> publishers = server.getPublishers();
-            if (userFieldText.equals("") && passFieldText.equals("")) {
-                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
-            }
-            else {
-                boolean flag = true;
-                for (Publisher temp : publishers) {
-                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
-                        new PublisherGUI(server, temp);
-                        setVisible(false); //you can't see me!
-                        dispose();//Destroy the JFrame object
-                        flag = false;
-                    }
-                }
-                if (flag) {
-                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
-                    userNameTextField.setText("");
-                    passwordTextField.setText("");
-                    userNameTextField.requestFocus();
-                }
-            }
+        if (userFieldText.equals("") && passFieldText.equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
         }
-        else if ("Admin".equals(typeUser.getSelectedItem())) {
-            ArrayList<Admin> admins = server.getAdmins();
-            if (userFieldText.equals("") && passFieldText.equals("")) {
-                JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+        else
+        {
+            boolean successful = false;
+            if ("Customer".equals(typeUser.getSelectedItem()))
+            {
+
+                Customer customerInServer = server.customerLogin(userFieldText, passFieldText);
+                if (customerInServer != null)
+                {
+                    new CustomerGUI(server, customerInServer);
+                    successful = true;
+                }
             }
-            else {
-                boolean flag = true;
-                for (Admin temp : admins) {
-                    if (userFieldText.equals(temp.getUserName()) && passFieldText.equals(temp.getPassword())) {
-                        new AdminGUI(server, temp);
-                        setVisible(false); //you can't see me!
-                        dispose();//Destroy the JFrame object
-                        flag = false;
-                    }
+            else if ("Publisher".equals(typeUser.getSelectedItem()))
+            {
+
+                Publisher publisherInServer = server.publisherLogin(userFieldText, passFieldText);
+                if (publisherInServer != null)
+                {
+                    new PublisherGUI(server, publisherInServer);
+                    successful = true;
                 }
-                if (flag) {
-                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
-                    userNameTextField.setText("");
-                    passwordTextField.setText("");
-                    userNameTextField.requestFocus();
+            }
+            else if ("Admin".equals(typeUser.getSelectedItem()))
+            {
+                Admin adminInServer = server.adminLogin(userFieldText, passFieldText);
+                if (adminInServer != null)
+                {
+                    new AdminGUI(server, adminInServer);
+                    successful = true;
                 }
+            }
+
+            if (successful)
+            {
+                setVisible(false);
+                dispose();
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+                userNameTextField.setText("");
+                passwordTextField.setText("");
+                userNameTextField.requestFocus();
             }
         }
     }
+
 
     private void back(){
         setVisible(false); //you can't see me!

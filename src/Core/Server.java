@@ -34,9 +34,16 @@ public class Server
 
     public void addBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
     {
-        Book book = new Book(name, publisher, author, ageRate, subject, edition, price, number, summery);
-        books.add(book);
-        publisher.addBook(book);
+        Book newBook = new Book(name, publisher, author, ageRate, subject, edition, price, number, summery);
+
+        for (Book book : books)
+        {
+            if (newBook.equals(book))
+                return;
+        }
+
+        books.add(newBook);
+        publisher.addBook(newBook);
     }
 
     public void sellCart(Cart cart)
@@ -64,22 +71,90 @@ public class Server
 
     }
 
-    public void addCustomer(String userName, String password, String phoneNumber, String address)
+    public int addCustomer(String userName, String password, String phoneNumber, String address)
     {
         Customer newCustomer = new Customer(userName, password, phoneNumber, address);
+
+        if (isDuplicateUserName(userName))
+        {
+            return 1;
+        }
+        else if (isDuplicatePhoneNumber(phoneNumber))
+        {
+            return 2;
+        }
         customers.add(newCustomer);
+
+        return 0;
     }
 
     public void addPublisher(String userName, String password, String name, String phoneNumber, String address)
     {
         Publisher newPublisher = new Publisher(userName, password, name, phoneNumber, address);
-        publishers.add(newPublisher);
+        if (!isDuplicateUserName(userName))
+        {
+            publishers.add(newPublisher);
+        }
     }
 
     public void addAdmin(String userName, String password, Server server)
     {
         Admin newAdmin = new Admin(userName, password, server);
-        admins.add(newAdmin);
+
+        if (!isDuplicateUserName(userName))
+        {
+            admins.add(newAdmin);
+        }
+    }
+
+    private boolean isDuplicateUserName(String userName)
+    {
+        for (Customer customer : customers)
+        {
+            if (customer.getUserName().equals(userName))
+            {
+                return true;
+            }
+        }
+
+        for (Publisher publisher : publishers)
+        {
+            if (publisher.getUserName().equals(userName))
+            {
+                return true;
+            }
+        }
+
+        for (Admin admin : admins)
+        {
+            if (admin.getUserName().equals(userName))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private boolean isDuplicatePhoneNumber(String phoneNumber)
+    {
+        for (Customer customer : customers)
+        {
+            if (customer.getPhoneNumber().equals(phoneNumber))
+            {
+                return true;
+            }
+        }
+
+        for (Publisher publisher : publishers)
+        {
+            if (publisher.getPhoneNumber().equals(phoneNumber))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void saveDataBase()
@@ -194,6 +269,18 @@ public class Server
 
     }
 
+    public Customer customerLogin(String userName, String password)
+    {
+        for (Customer customer : customers)
+        {
+            if (userName.equals(customer.getUserName()) && password.equals(customer.getPassword()))
+            {
+                return customer;
+            }
+        }
+        return null;
+    }
+
     //Publisher Methods
 
     public void publisherAddBook(String name, Publisher publisher, String author, String ageRate, String subject, String edition, int price, int number, String summery)
@@ -232,6 +319,18 @@ public class Server
 
     }
 
+    public Publisher publisherLogin(String userName, String password)
+    {
+        for (Publisher publisher : publishers)
+        {
+            if (userName.equals(publisher.getUserName()) && password.equals(publisher.getPassword()))
+            {
+                return publisher;
+            }
+        }
+        return null;
+    }
+
     //Admin Methods
 
 
@@ -249,6 +348,20 @@ public class Server
     {
 
     }
+
+    public Admin adminLogin(String userName, String password)
+    {
+        for (Admin admin : admins)
+        {
+            if (userName.equals(admin.getUserName()) && password.equals(admin.getPassword()))
+            {
+                return admin;
+            }
+        }
+        return null;
+    }
+
+    //Server Getters
 
     public ArrayList<Book> getBooks()
     {
