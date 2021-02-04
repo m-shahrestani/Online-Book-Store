@@ -2,27 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/JTattoo_1_6_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Online Book Store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Online Book Store.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Publisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/BookStoreGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/BookStoreGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherAddBookPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherAddBookPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/META-INF/Online Book Store.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/JTattoo-1.6.13.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -99,6 +121,10 @@
       <workItem from="1612194933382" duration="678000" />
       <workItem from="1612268140638" duration="60000" />
       <workItem from="1612357568320" duration="8652000" />
+      <workItem from="1612430916247" duration="1583000" />
+      <workItem from="1612432558851" duration="1764000" />
+      <workItem from="1612434362199" duration="1816000" />
+      <workItem from="1612436633031" duration="699000" />
     </task>
     <servers />
   </component>
@@ -110,6 +136,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="72" y="201" key="#Project_Structure/0.0.1280.984@0.0.1280.984" timestamp="1612076406389" />
+    <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1612430925986">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1612430925986" />
     <state x="328" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612362013616">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -118,21 +148,25 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612357909290" />
-    <state width="1237" height="255" key="GridCell.Tab.0.bottom" timestamp="1612366176919">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1237" height="179" key="GridCell.Tab.0.bottom" timestamp="1612437337401">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612437337401" />
     <state width="1237" height="255" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612366176919" />
-    <state width="1237" height="255" key="GridCell.Tab.0.center" timestamp="1612366176918">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1237" height="179" key="GridCell.Tab.0.center" timestamp="1612437337401">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612437337401" />
     <state width="1237" height="255" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612366176918" />
-    <state width="1237" height="255" key="GridCell.Tab.0.left" timestamp="1612366176918">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1237" height="179" key="GridCell.Tab.0.left" timestamp="1612437337401">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612437337401" />
     <state width="1237" height="255" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612366176918" />
-    <state width="1237" height="255" key="GridCell.Tab.0.right" timestamp="1612366176919">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1237" height="179" key="GridCell.Tab.0.right" timestamp="1612437337401">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612437337401" />
     <state width="1237" height="255" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612366176919" />
     <state x="120" y="67" key="SettingsEditor" timestamp="1612357914273">
       <screen x="0" y="0" width="1280" height="984" />

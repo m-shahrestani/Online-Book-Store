@@ -66,22 +66,10 @@ public class CustomerCartPanel extends JFrame
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
         bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
-        //JButton jButton = new JButton("add to cart");
-        //bookPanel.add(jButton);
-        bookPanel.add(addButton(book));
+
         return bookPanel;
     }
 
-    public JButton addButton(Book book){
-        JButton buy = new JButton("buy");
-        buy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                server.purchase(customer);
-            }
-        });
-        return buy;
-    }
 
     public JPanel showCart(){
         this.cart = customer.getCart();
@@ -91,6 +79,18 @@ public class CustomerCartPanel extends JFrame
         gridLayout.setRows(20);
         gridLayout.setVgap(7);
         mainPanel.setLayout(gridLayout);
+
+        JPanel jPanel = new JPanel();
+        JButton buy = new JButton("buy");
+        buy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                server.purchase(customer);
+            }
+        });
+        jPanel.add(buy);
+        mainPanel.add(jPanel);
+
         mainPanel.add(bookPanelHeader());
         System.out.println(1);
         if (cart != null) {
