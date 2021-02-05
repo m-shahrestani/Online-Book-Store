@@ -12,12 +12,14 @@ public class Server
     private static final String PUBLISHER_PATH = "res/DataBase/publishers.bin";
     private static final String ADMIN_PATH = "res/DataBase/admins.bin";
     private static final String BOOKS_PATH = "res/DataBase/books.bin";
+    //singleton instance
+    private static Server INSTANCE = null;
     private ArrayList<Customer> customers;
     private ArrayList<Publisher> publishers;
     private ArrayList<Admin> admins;
     private ArrayList<Book> books;
 
-    public Server()
+    private Server()
     {
         customers = new ArrayList<>();
         publishers = new ArrayList<>();
@@ -31,6 +33,17 @@ public class Server
         } catch (Exception ignored) {}
         BookStoreGUI bookStoreGUI = BookStoreGUI.getInstance(this);
     }
+
+/**
+ * Create a new BookStoreGUI with singleton.
+ *
+ * @return INSTANCE.
+ */
+public static Server getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new Server();
+            return INSTANCE;
+        }
 
 
     //Server Methods

@@ -7,52 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/Core/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/AdminRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/BookStoreGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/BookStoreGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerCartPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/CustomerRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/LoginGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherAddBookPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Online Book Store/GUI/PublisherRegisterGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForCustomerPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Online Book Store/GUI/ShowBooksForPublisherPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/DataBase/customers.bin" beforeDir="false" afterPath="$PROJECT_DIR$/res/DataBase/customers.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/DataBase/publishers.bin" beforeDir="false" afterPath="$PROJECT_DIR$/res/DataBase/publishers.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/books.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/bookstore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/cart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/mainMenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/userIcon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AdminRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BookStoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherAddBookPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherAddBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PublisherRegisterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisherPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ShowBooksForPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +104,7 @@
       <workItem from="1612453951744" duration="6000" />
       <workItem from="1612481702866" duration="9504000" />
       <workItem from="1612528624301" duration="2514000" />
+      <workItem from="1612531689494" duration="743000" />
     </task>
     <servers />
   </component>
