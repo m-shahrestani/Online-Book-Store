@@ -100,17 +100,40 @@ public class PublisherAddBookPanel extends JFrame
     }
 
     private void addBook() {
-        try{
-            Integer.parseInt(priceTextField.getText());
-            Integer.parseInt(numberTextField.getText());
-            server.addBook(nameTextField.getText(), publisher,authorTextField.getText(), ageRateTextField.getText()
-                    ,subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
-                    , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
-            setVisible(false); //you can't see me!
-            dispose();//Destroy the JFrame object
-        }catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Price and Number must be an Integer");
+        if (nameTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Name.");
+            numberTextField.requestFocus();
+        } else if (authorTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Author.");
+            authorTextField.requestFocus();
+        } else if (ageRateTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter AgeRate.");
+            ageRateTextField.requestFocus();
+        } else if (subjectTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Subject.");
+            subjectTextField.requestFocus();
+        } else if (editionTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Edition.");
+            editionTextField.requestFocus();
+        } else if (priceTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Price.");
+            priceTextField.requestFocus();
+        } else if (numberTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Address.");
+            numberTextField.requestFocus();
+        } else if (summeryTextArea.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Summery.");
+            summeryTextArea.requestFocus();
+        } else {
+            try {
+                server.addBook(nameTextField.getText(), publisher, authorTextField.getText(), ageRateTextField.getText()
+                        , subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
+                        , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
+                setVisible(false); //you can't see me!
+                dispose();//Destroy the JFrame object
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Please Enter An Integer In Number and Price.");
+            }
         }
-
     }
 }
