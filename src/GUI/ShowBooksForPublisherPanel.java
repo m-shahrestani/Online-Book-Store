@@ -37,9 +37,8 @@ public class ShowBooksForPublisherPanel extends JFrame
         return bookInformationLabel;
     }
     public JPanel bookPanelHeader(){
-        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 9));
+        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 8));
         bookPanelHeader.add(bookInformationLabel("Book Name"));
-        bookPanelHeader.add(bookInformationLabel("Publisher"));
         bookPanelHeader.add(bookInformationLabel("Author"));
         bookPanelHeader.add(bookInformationLabel("Age Rate"));
         bookPanelHeader.add(bookInformationLabel("Subject"));
@@ -55,9 +54,8 @@ public class ShowBooksForPublisherPanel extends JFrame
         return bookInformationField;
     }
     public JPanel bookPanel(Book book){
-        JPanel bookPanel = new JPanel(new GridLayout(1, 9));
+        JPanel bookPanel = new JPanel(new GridLayout(1, 8));
         bookPanel.add(bookInformationField(book.getName()));
-        bookPanel.add(bookInformationField(book.getPublisher().getName()));
         bookPanel.add(bookInformationField(book.getAuthor()));
         bookPanel.add(bookInformationField(book.getAgeRate()));
         bookPanel.add(bookInformationField(book.getSubject()));
