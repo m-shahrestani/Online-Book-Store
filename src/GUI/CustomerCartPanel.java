@@ -49,13 +49,13 @@ public class CustomerCartPanel extends JFrame
         bookPanelHeader.add(bookInformationLabel("Age Rate"));
         bookPanelHeader.add(bookInformationLabel("Subject"));
         bookPanelHeader.add(bookInformationLabel("Edition"));
-        bookPanelHeader.add(bookInformationLabel("Number"));
+        bookPanelHeader.add(bookInformationLabel("price"));
         bookPanelHeader.add(bookInformationLabel(""));
         return bookPanelHeader;
     }
 
     public JTextField bookInformationField(String information){
-        JTextField bookInformationField = new JTextField(information, 10);
+        JTextField bookInformationField = new JTextField(information, 8);
         bookInformationField.setEditable(false);
         return bookInformationField;
     }
@@ -68,7 +68,7 @@ public class CustomerCartPanel extends JFrame
         bookPanel.add(bookInformationField(book.getAgeRate()));
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
-        bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
+        bookPanel.add(bookInformationField(String.valueOf(book.getPrice())));
 
         return bookPanel;
     }
