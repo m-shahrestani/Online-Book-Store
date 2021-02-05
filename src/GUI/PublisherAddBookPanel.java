@@ -100,10 +100,17 @@ public class PublisherAddBookPanel extends JFrame
     }
 
     private void addBook() {
-        server.addBook(nameTextField.getText(), publisher,authorTextField.getText(), ageRateTextField.getText()
-                ,subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
-                , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
-        setVisible(false); //you can't see me!
-        dispose();//Destroy the JFrame object
+        try{
+            Integer.parseInt(priceTextField.getText());
+            Integer.parseInt(numberTextField.getText());
+            server.addBook(nameTextField.getText(), publisher,authorTextField.getText(), ageRateTextField.getText()
+                    ,subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
+                    , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
+            setVisible(false); //you can't see me!
+            dispose();//Destroy the JFrame object
+        }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Price and Number must be an Integer");
+        }
+
     }
 }
