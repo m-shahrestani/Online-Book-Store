@@ -13,7 +13,7 @@ import java.awt.event.MouseListener;
 public class AdminRegisterGUI extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private JTextField userNameTextField;
     private JPasswordField passwordTextField;
@@ -197,16 +197,18 @@ public class AdminRegisterGUI extends JFrame
         String passwordText = passwordTextField.getText();
 
         if(userNameText.equals("")) {
-            JOptionPane.showMessageDialog(null, "Please Enter Username");
+            JOptionPane.showMessageDialog(null, "Please Enter Username.");
+            userNameTextField.requestFocus();
         }
         else if(passwordText.equals("")){
-            JOptionPane.showMessageDialog(null, "Please Enter Password");
+            JOptionPane.showMessageDialog(null, "Please Enter Password.");
+            passwordTextField.requestFocus();
         }
         else {
             boolean flag = true;
             for (Admin temp : server.getAdmins()) {
                 if (userNameText.equals(temp.getUserName())) {
-                    JOptionPane.showMessageDialog(null, "Username is already in use");
+                    JOptionPane.showMessageDialog(null, "Username is already in use.");
                     userNameTextField.setText("");
                     passwordTextField.setText("");
                     userNameTextField.requestFocus();

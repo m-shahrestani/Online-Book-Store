@@ -10,9 +10,9 @@ import java.awt.event.WindowEvent;
 public class BookStoreGUI extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     //background picture address
-    private static final String MAINmENU_PATH  = "res/background.jpg";
+    private static final String MAINmENU_PATH  = "res/img/background.jpg";
     //singleton instance
     private static BookStoreGUI INSTANCE = null;
     private Server server;
@@ -150,19 +150,18 @@ public class BookStoreGUI extends JFrame
     }
 
     private void loginGUI(){
-        LoginGUI loginGUI = new LoginGUI(server);
+        new LoginGUI(server);
     }
 
     private void customerRegisterGUI(){
-        CustomerRegisterGUI customerRegisterGUI = new CustomerRegisterGUI(server);
+        new CustomerRegisterGUI(server);
     }
 
-    private void publisherRegisterGUI(){
-        PublisherRegisterGUI publisherRegisterGUI = new PublisherRegisterGUI(server);
+    private void publisherRegisterGUI(){ new PublisherRegisterGUI(server);
     }
 
     private void adminRegisterGUI(){
-        AdminRegisterGUI adminRegisterGUI = new AdminRegisterGUI(server);
+        new AdminRegisterGUI(server);
     }
 
     private void help(){

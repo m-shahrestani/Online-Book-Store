@@ -5,13 +5,11 @@ import Core.Server;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class PublisherAddBookPanel extends JFrame
+public class PublisherAddBook extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private Publisher publisher;
     private JTextField nameTextField;
@@ -24,7 +22,7 @@ public class PublisherAddBookPanel extends JFrame
     private JTextArea summeryTextArea;
     private JButton addBookButton;
 
-    public PublisherAddBookPanel(Server server, Publisher publisher)
+    public PublisherAddBook(Server server, Publisher publisher)
     {
         setTitle(publisher.getName() + " -Add book");
         ImageIcon icon = new ImageIcon(ICON_PATH);
@@ -100,10 +98,40 @@ public class PublisherAddBookPanel extends JFrame
     }
 
     private void addBook() {
-        server.addBook(nameTextField.getText(), publisher,authorTextField.getText(), ageRateTextField.getText()
-                ,subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
-                , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
-        setVisible(false); //you can't see me!
-        dispose();//Destroy the JFrame object
+        if (nameTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Name.");
+            numberTextField.requestFocus();
+        } else if (authorTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Author.");
+            authorTextField.requestFocus();
+        } else if (ageRateTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter AgeRate.");
+            ageRateTextField.requestFocus();
+        } else if (subjectTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Subject.");
+            subjectTextField.requestFocus();
+        } else if (editionTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Edition.");
+            editionTextField.requestFocus();
+        } else if (priceTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Price.");
+            priceTextField.requestFocus();
+        } else if (numberTextField.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Address.");
+            numberTextField.requestFocus();
+        } else if (summeryTextArea.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Summery.");
+            summeryTextArea.requestFocus();
+        } else {
+            try {
+                server.addBook(nameTextField.getText(), publisher, authorTextField.getText(), ageRateTextField.getText()
+                        , subjectTextField.getText(), editionTextField.getText(), Integer.parseInt(priceTextField.getText())
+                        , Integer.parseInt(numberTextField.getText()), summeryTextArea.getText());
+                setVisible(false); //you can't see me!
+                dispose();//Destroy the JFrame object
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Please Enter An Integer In Number and Price.");
+            }
+        }
     }
 }

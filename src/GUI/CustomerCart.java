@@ -7,21 +7,19 @@ import Core.Server;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 
-public class CustomerCartPanel extends JFrame
+public class CustomerCart extends JFrame
 {
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private ArrayList<JPanel> bookPanels;
     private Cart cart;
     private Customer customer;
     //Book panel includes a button and a book
 
-    public CustomerCartPanel(Server server, Customer customer)
+    public CustomerCart(Server server, Customer customer)
     {
         setTitle(customer.getUserName() + " -Cart");
         ImageIcon icon = new ImageIcon(ICON_PATH);
@@ -37,8 +35,7 @@ public class CustomerCartPanel extends JFrame
     }
 
     public JLabel bookInformationLabel(String description){
-        JLabel bookInformationLabel = new JLabel(description);
-        return bookInformationLabel;
+        return new JLabel(description);
     }
 
     public JPanel bookPanelHeader(){
@@ -49,13 +46,12 @@ public class CustomerCartPanel extends JFrame
         bookPanelHeader.add(bookInformationLabel("Age Rate"));
         bookPanelHeader.add(bookInformationLabel("Subject"));
         bookPanelHeader.add(bookInformationLabel("Edition"));
-        bookPanelHeader.add(bookInformationLabel("Number"));
-        bookPanelHeader.add(bookInformationLabel(""));
+        bookPanelHeader.add(bookInformationLabel("Price"));
         return bookPanelHeader;
     }
 
     public JTextField bookInformationField(String information){
-        JTextField bookInformationField = new JTextField(information, 10);
+        JTextField bookInformationField = new JTextField(information, 8);
         bookInformationField.setEditable(false);
         return bookInformationField;
     }
@@ -68,7 +64,7 @@ public class CustomerCartPanel extends JFrame
         bookPanel.add(bookInformationField(book.getAgeRate()));
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
-        bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
+        bookPanel.add(bookInformationField(String.valueOf(book.getPrice())));
 
         return bookPanel;
     }
@@ -82,15 +78,11 @@ public class CustomerCartPanel extends JFrame
         gridLayout.setRows(20);
         gridLayout.setVgap(7);
         mainPanel.setLayout(gridLayout);
-
+        JLabel jLabel = new JLabel(" total cost : "+cart.getTotalCost()+"  ");
         JPanel jPanel = new JPanel();
         JButton buy = new JButton("buy");
-        buy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                server.purchase(customer);
-            }
-        });
+        buy.addActionListener(e -> server.purchase(customer));
+        jPanel.add(jLabel);
         jPanel.add(buy);
         mainPanel.add(jPanel);
 

@@ -6,21 +6,18 @@ import Core.Server;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashMap;
 
-public class ShowBooksForCustomerPanel extends JFrame
+public class ShowBooksForCustomer extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private ArrayList<Book> books;
     private ArrayList<JPanel> bookPanels;
     private Customer customer;
 
-    public ShowBooksForCustomerPanel(Server server,Customer customer)
+    public ShowBooksForCustomer(Server server, Customer customer)
     {
         setTitle("Books");
         ImageIcon icon = new ImageIcon(ICON_PATH);
@@ -37,11 +34,10 @@ public class ShowBooksForCustomerPanel extends JFrame
         setVisible(true);
     }
     public JLabel bookInformationLabel(String description){
-        JLabel bookInformationLabel = new JLabel(description);
-        return bookInformationLabel;
+        return new JLabel(description);
     }
     public JPanel bookPanelHeader(){
-        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 10));
         bookPanelHeader.add(bookInformationLabel("Book Name"));
         bookPanelHeader.add(bookInformationLabel("Publisher"));
         bookPanelHeader.add(bookInformationLabel("Author"));
@@ -49,6 +45,8 @@ public class ShowBooksForCustomerPanel extends JFrame
         bookPanelHeader.add(bookInformationLabel("Subject"));
         bookPanelHeader.add(bookInformationLabel("Edition"));
         bookPanelHeader.add(bookInformationLabel("Number"));
+        bookPanelHeader.add(bookInformationLabel("price"));
+        bookPanelHeader.add(bookInformationLabel(""));
         bookPanelHeader.add(bookInformationLabel(""));
         return bookPanelHeader;
     }
@@ -58,7 +56,7 @@ public class ShowBooksForCustomerPanel extends JFrame
         return bookInformationField;
     }
     public JPanel bookPanel(Book book){
-        JPanel bookPanel = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanel = new JPanel(new GridLayout(1, 10));
         bookPanel.add(bookInformationField(book.getName()));
         bookPanel.add(bookInformationField(book.getPublisher().getName()));
         bookPanel.add(bookInformationField(book.getAuthor()));
@@ -66,22 +64,36 @@ public class ShowBooksForCustomerPanel extends JFrame
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
         bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
-        //JButton jButton = new JButton("add to cart");
-        //bookPanel.add(jButton);
+        bookPanel.add(bookInformationField(String.valueOf(book.getPrice())));
+        bookPanel.add(summeryButton(book));
         bookPanel.add(addButton(book));
+
         return bookPanel;
     }
     public JButton addButton(Book book){
         JButton add = new JButton("add to cart");
-        add.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                addToCart(book);
-            }
+        add.addActionListener(e -> {
+            addToCart(book);
+            JOptionPane.showMessageDialog(null, "The book is added.");
         });
         return add;
     }
 
+    public JButton summeryButton(Book book){
+        JButton add = new JButton("summery");
+        add.addActionListener(e -> bookSummery(book));
+        return add;
+    }
+    public void bookSummery(Book book){
+        JFrame summeryFrame = new JFrame(book.getName()+" -Summery");
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        summeryFrame.setIconImage(icon.getImage());
+        JTextArea summery = new JTextArea(5, 20);
+        summery.setText(book.getSummery());
+        summeryFrame.add(summery);
+        summeryFrame.setSize(500, 500);
+        summeryFrame.setVisible(true);
+    }
     public JPanel showAllBookForCustomer(){
         this.books = server.getBooks();
         JPanel mainPanel = new JPanel();

@@ -5,19 +5,17 @@ import Core.Publisher;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class ShowBooksForPublisherPanel extends JFrame
+public class ShowBooksForPublisher extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/img/icon.png";
     private Publisher publisher;
     private ArrayList<Book> books;
     private ArrayList<JPanel> bookPanels;
 
-    public ShowBooksForPublisherPanel(Publisher publisher)
+    public ShowBooksForPublisher(Publisher publisher)
     {
         setTitle(publisher.getName() + " -Publisher's Books");
         ImageIcon icon = new ImageIcon(ICON_PATH);
@@ -33,13 +31,11 @@ public class ShowBooksForPublisherPanel extends JFrame
     }
 
     public JLabel bookInformationLabel(String description){
-        JLabel bookInformationLabel = new JLabel(description);
-        return bookInformationLabel;
+        return new JLabel(description);
     }
     public JPanel bookPanelHeader(){
-        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 9));
+        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 8));
         bookPanelHeader.add(bookInformationLabel("Book Name"));
-        bookPanelHeader.add(bookInformationLabel("Publisher"));
         bookPanelHeader.add(bookInformationLabel("Author"));
         bookPanelHeader.add(bookInformationLabel("Age Rate"));
         bookPanelHeader.add(bookInformationLabel("Subject"));
@@ -55,9 +51,8 @@ public class ShowBooksForPublisherPanel extends JFrame
         return bookInformationField;
     }
     public JPanel bookPanel(Book book){
-        JPanel bookPanel = new JPanel(new GridLayout(1, 9));
+        JPanel bookPanel = new JPanel(new GridLayout(1, 8));
         bookPanel.add(bookInformationField(book.getName()));
-        bookPanel.add(bookInformationField(book.getPublisher().getName()));
         bookPanel.add(bookInformationField(book.getAuthor()));
         bookPanel.add(bookInformationField(book.getAgeRate()));
         bookPanel.add(bookInformationField(book.getSubject()));
@@ -68,8 +63,10 @@ public class ShowBooksForPublisherPanel extends JFrame
         return bookPanel;
     }
     public void bookSummery(Book book){
-        JFrame summeryFrame = new JFrame(book.getName()+" Summery");
+        JFrame summeryFrame = new JFrame(book.getName()+" -Summery");
         JTextArea summery = new JTextArea(5, 20);
+        ImageIcon icon = new ImageIcon(ICON_PATH);
+        summeryFrame.setIconImage(icon.getImage());
         summery.setText(book.getSummery());
         summeryFrame.add(summery);
         summeryFrame.setSize(500, 500);
@@ -77,12 +74,7 @@ public class ShowBooksForPublisherPanel extends JFrame
     }
     public JButton showSummery(Book book){
         JButton showSummery = new JButton("Show Summery");
-        showSummery.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                bookSummery(book);
-            }
-        });
+        showSummery.addActionListener(e -> bookSummery(book));
         return showSummery;
     }
     public JPanel showAllPublisherBook(){

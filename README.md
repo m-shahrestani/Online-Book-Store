@@ -2,7 +2,7 @@
 
 ## SE Final Project  
 
-<img src=res/mainMenu.png></img>  
+<img src=res/img/mainMenu.png></img>  
   
 ## SEMM group
 * Mohammadreza Shahrestani

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class LoginGUI extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private JTextField userNameTextField;
     private JPasswordField passwordTextField;
@@ -226,6 +226,7 @@ public class LoginGUI extends JFrame
         if (userFieldText.equals("") && passFieldText.equals(""))
         {
             JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
+            userNameTextField.requestFocus();
         }
         else
         {

@@ -23,18 +23,15 @@ public class Server
         publishers = new ArrayList<>();
         admins = new ArrayList<>();
         books = new ArrayList<>();
-    }
+        loadDataBase();
 
-    public static void main(String[] args)
-    {
-        Server server = new Server();
-        server.loadDataBase();
         //look and feel
         try {
             javax.swing.UIManager.setLookAndFeel(com.jtattoo.plaf.texture.TextureLookAndFeel.class.getName());
         } catch (Exception ignored) {}
-        BookStoreGUI bookStoreGUI = BookStoreGUI.getInstance(server);
+        BookStoreGUI bookStoreGUI = BookStoreGUI.getInstance(this);
     }
+
 
     //Server Methods
 

@@ -11,7 +11,7 @@ import java.awt.event.MouseListener;
 public class PublisherRegisterGUI extends JFrame
 {
     //icon address
-    private static final String ICON_PATH = "res/icon.png";
+    private static final String ICON_PATH = "res/img/icon.png";
     private Server server;
     private JTextField userNameTextField;
     private JTextField passwordTextField;
@@ -358,30 +358,35 @@ public class PublisherRegisterGUI extends JFrame
         String addressText =  addressTextField.getText();
 
         if(userNameText.equals("")) {
-            JOptionPane.showMessageDialog(null, "Please Enter Username");
+            JOptionPane.showMessageDialog(null, "Please Enter Username.");
+            userNameTextField.requestFocus();
         }
         else if(passwordText.equals("")){
-            JOptionPane.showMessageDialog(null, "Please Enter Password");
+            JOptionPane.showMessageDialog(null, "Please Enter Password.");
+            passwordTextField.requestFocus();
         }
         else if(nameText.equals("")){
-            JOptionPane.showMessageDialog(null, "Please Enter Publisher Name");
+            JOptionPane.showMessageDialog(null, "Please Enter Publisher Name.");
+            nameTextField.requestFocus();
         }
         else if(phoneNumberText.equals("")){
-            JOptionPane.showMessageDialog(null, "Please Enter Phone Number");
+            JOptionPane.showMessageDialog(null, "Please Enter Phone Number.");
+            phoneNumberTextField.requestFocus();
         }
         else if(addressText.equals("")){
-            JOptionPane.showMessageDialog(null, "Please Enter Address");
+            JOptionPane.showMessageDialog(null, "Please Enter Address.");
+            addressTextField.requestFocus();
         }
         else {
             int returnValue;
             returnValue = server.addPublisher(userNameText, passwordText, nameText, phoneNumberText, addressText);
             if (returnValue == 1) {
-                JOptionPane.showMessageDialog(null, "Username is already in use");
+                JOptionPane.showMessageDialog(null, "Username is already in use.");
                 userNameTextField.setText("");
                 userNameTextField.requestFocus();
             }
             else if (returnValue == 2) {
-                JOptionPane.showMessageDialog(null, "Phone number is already in use");
+                JOptionPane.showMessageDialog(null, "Phone number is already in use.");
                 phoneNumberTextField.setText("");
                 phoneNumberTextField.requestFocus();
             }
