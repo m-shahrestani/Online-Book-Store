@@ -41,7 +41,7 @@ public class ShowBooksForCustomerPanel extends JFrame
         return bookInformationLabel;
     }
     public JPanel bookPanelHeader(){
-        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanelHeader = new JPanel(new GridLayout(1, 10));
         bookPanelHeader.add(bookInformationLabel("Book Name"));
         bookPanelHeader.add(bookInformationLabel("Publisher"));
         bookPanelHeader.add(bookInformationLabel("Author"));
@@ -49,6 +49,8 @@ public class ShowBooksForCustomerPanel extends JFrame
         bookPanelHeader.add(bookInformationLabel("Subject"));
         bookPanelHeader.add(bookInformationLabel("Edition"));
         bookPanelHeader.add(bookInformationLabel("Number"));
+        bookPanelHeader.add(bookInformationLabel("price"));
+        bookPanelHeader.add(bookInformationLabel(""));
         bookPanelHeader.add(bookInformationLabel(""));
         return bookPanelHeader;
     }
@@ -58,7 +60,7 @@ public class ShowBooksForCustomerPanel extends JFrame
         return bookInformationField;
     }
     public JPanel bookPanel(Book book){
-        JPanel bookPanel = new JPanel(new GridLayout(1, 8));
+        JPanel bookPanel = new JPanel(new GridLayout(1, 10));
         bookPanel.add(bookInformationField(book.getName()));
         bookPanel.add(bookInformationField(book.getPublisher().getName()));
         bookPanel.add(bookInformationField(book.getAuthor()));
@@ -66,9 +68,12 @@ public class ShowBooksForCustomerPanel extends JFrame
         bookPanel.add(bookInformationField(book.getSubject()));
         bookPanel.add(bookInformationField(book.getEdition()));
         bookPanel.add(bookInformationField(String.valueOf(book.getNumber())));
+        bookPanel.add(bookInformationField(String.valueOf(book.getPrice())));
         //JButton jButton = new JButton("add to cart");
         //bookPanel.add(jButton);
+        bookPanel.add(summeryButton(book));
         bookPanel.add(addButton(book));
+
         return bookPanel;
     }
     public JButton addButton(Book book){
@@ -82,6 +87,24 @@ public class ShowBooksForCustomerPanel extends JFrame
         return add;
     }
 
+    public JButton summeryButton(Book book){
+        JButton add = new JButton("summery");
+        add.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bookSummery(book);
+            }
+        });
+        return add;
+    }
+    public void bookSummery(Book book){
+        JFrame summeryFrame = new JFrame(book.getName()+" Summery");
+        JTextArea summery = new JTextArea(5, 20);
+        summery.setText(book.getSummery());
+        summeryFrame.add(summery);
+        summeryFrame.setSize(500, 500);
+        summeryFrame.setVisible(true);
+    }
     public JPanel showAllBookForCustomer(){
         this.books = server.getBooks();
         JPanel mainPanel = new JPanel();
