@@ -78,9 +78,12 @@ public class CustomerCart extends JFrame
         gridLayout.setRows(20);
         gridLayout.setVgap(7);
         mainPanel.setLayout(gridLayout);
-        JLabel jLabel = new JLabel(" total cost : "+cart.getTotalCost()+"  ");
+        int totalCost = 0;
+        if (cart != null)
+            totalCost = cart.getTotalCost();
+        JLabel jLabel = new JLabel(" Total Cost : " + totalCost + "  ");
         JPanel jPanel = new JPanel();
-        JButton buy = new JButton("buy");
+        JButton buy = new JButton("Purchase");
         buy.addActionListener(e -> server.purchase(customer));
         jPanel.add(jLabel);
         jPanel.add(buy);

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="Online Book Store:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Online_Book_Store_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Online Book Store.jar">
+        <element id="module-output" name="Online Book Store" />
+      </element>
+      <element id="library" level="project" name="JTattoo-1.6.13" />
+    </root>
+  </artifact>
+</component>

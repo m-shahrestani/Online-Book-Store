@@ -7,8 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20e728e7-0b81-44f5-8f76-d62416addde9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/DataBase/customers.bin" beforeDir="false" afterPath="$PROJECT_DIR$/res/DataBase/customers.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CustomerCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CustomerCart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +106,7 @@
       <workItem from="1612481702866" duration="9504000" />
       <workItem from="1612528624301" duration="2514000" />
       <workItem from="1612531689494" duration="743000" />
+      <workItem from="1612599140125" duration="604000" />
     </task>
     <servers />
   </component>
@@ -116,10 +118,11 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="72" y="201" key="#Project_Structure/0.0.1280.984@0.0.1280.984" timestamp="1612076406389" />
-    <state x="370" y="276" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612491811551">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="555" y="292" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612599724578">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="370" y="276" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.984@0.0.1280.984" timestamp="1612491811551" />
+    <state x="555" y="292" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612599724578" />
     <state x="328" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612530511565">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -128,30 +131,40 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="333" y="291" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.984@0.0.1280.984" timestamp="1612484332486" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1612491822311">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="543" y="113" key="CommitChangelistDialog2" timestamp="1612599909648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="543" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612599909648" />
+    <state x="630" y="261" key="FileChooserDialogImpl" timestamp="1612599729653">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1612491822311" />
-    <state width="1237" height="6" key="GridCell.Tab.0.bottom" timestamp="1612531192969">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="630" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612599729653" />
+    <state width="1876" height="125" key="GridCell.Tab.0.bottom" timestamp="1612599775708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="6" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1612531192969" />
-    <state width="1237" height="6" key="GridCell.Tab.0.center" timestamp="1612531192968">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612599775708" />
+    <state width="1876" height="125" key="GridCell.Tab.0.center" timestamp="1612599775708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="6" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1612531192968" />
-    <state width="1237" height="6" key="GridCell.Tab.0.left" timestamp="1612531192968">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612599775708" />
+    <state width="1876" height="125" key="GridCell.Tab.0.left" timestamp="1612599775708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="6" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1612531192968" />
-    <state width="1237" height="6" key="GridCell.Tab.0.right" timestamp="1612531192969">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612599775708" />
+    <state width="1876" height="125" key="GridCell.Tab.0.right" timestamp="1612599775708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="6" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1612531192969" />
-    <state x="83" y="111" key="SettingsEditor" timestamp="1612491872491">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="1876" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612599775708" />
+    <state x="125" y="117" key="SettingsEditor" timestamp="1612599743592">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="83" y="111" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1612491872491" />
+    <state x="125" y="117" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1612599743592" />
     <state x="271" y="37" width="737" height="909" key="find.popup" timestamp="1612530859982">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
