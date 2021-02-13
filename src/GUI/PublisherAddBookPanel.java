@@ -40,12 +40,15 @@ public class PublisherAddBookPanel extends JFrame
         priceTextField = new JTextField(20);
         numberTextField = new JTextField(20);
         summeryTextArea = new JTextArea(5,20);
+        JScrollPane textAreaScrollPane = new JScrollPane(summeryTextArea);
+        textAreaScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        textAreaScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         addBookButton = new JButton("Add Book");
 
         addAllLabels(constr, mainPanel);
         addAllTextFields(constr, mainPanel);
         constr.gridx=1; constr.gridy=7;
-        mainPanel.add(summeryTextArea, constr);
+        mainPanel.add(textAreaScrollPane, constr);
         constr.gridx=0; constr.gridy=8;
         constr.gridwidth = 2;
         constr.anchor = GridBagConstraints.CENTER;
